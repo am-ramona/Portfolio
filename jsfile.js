@@ -148,10 +148,10 @@
     };          
     
     if(isCanvasSupported()){
-            var c = document.getElementById('waterfall');
-            var cw = c.width = 100;
-            var ch = c.height = 140;    
-            var waterfall = new waterfallCanvas(c, cw, ch);           
-            setupRAF();
-            waterfall.init();
+//             var c = document.getElementById('waterfall');
+//             var cw = c.width = 100;
+//             var ch = c.height = 140;    
+//             var waterfall = new waterfallCanvas(c, cw, ch);           
+//             setupRAF();
+//             waterfall.init();
     }
