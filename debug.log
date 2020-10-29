@@ -1,0 +1,7 @@
+[1029/122653.978:ERROR:settings.cc(430)] Settings version is not 5
+[1029/124129.633:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Ramona\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\7f53f6a4-b68c-4e44-9ea7-cf0a057ee058: The system cannot find the path specified. (0x3)
+[1029/124319.428:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Ramona\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\6f10b2c3-c6dd-422b-a30e-e82a40fa033b: The system cannot find the path specified. (0x3)
+[1029/124319.795:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Ramona\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\fbd200b9-92fc-4fc9-b6d1-2d8538f16804: The system cannot find the path specified. (0x3)
+[1029/124320.013:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1029/124640.682:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Ramona\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\f5721949-668c-49b6-9b13-3947ff962ddb: The system cannot find the path specified. (0x3)
+[1029/125142.108:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Ramona\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\b474e62a-192e-45c9-9326-4ff40b865c0d: The system cannot find the path specified. (0x3)
