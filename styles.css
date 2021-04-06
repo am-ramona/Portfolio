@@ -107,8 +107,38 @@ canvas {
   margin-bottom: 0; */
 }
 
+/* #shimmeryComingSoon h1 {
+        color: rgba(255,255,255,0.1);
+        background-image: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+        background-image: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+        background-image: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+        -webkit-background-size: 125px 100%;
+        -moz-background-size: 125px 100%;
+        background-size: 125px 100%;
+          /* -webkit-background-size: 15px 100%;
+        -moz-background-size: 15px 100%;
+        background-size: 15px 100%; */
+        /* -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+      
+        -webkit-animation-name: shimmer;
+        -moz-animation-name: shimmer;
+        animation-name: shimmer;
+        -webkit-animation-duration: 4s;
+        -moz-animation-duration: 4s;
+        animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-color: #222; */
+      
+        /* background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) no-repeat 0 0 text; */
+      } */
+
 #shimmeryComingSoon h1 {
-  /* text-align: center; */
   color: rgba(255,255,255,0.1);
   background-image: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
   background-image: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
@@ -116,9 +146,6 @@ canvas {
   -webkit-background-size: 125px 100%;
   -moz-background-size: 125px 100%;
   background-size: 125px 100%;
-    /* -webkit-background-size: 15px 100%;
-  -moz-background-size: 15px 100%;
-  background-size: 15px 100%; */
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -135,9 +162,8 @@ canvas {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-color: #222;
-
-  /* background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) no-repeat 0 0 text; */
 }
+
 @-moz-keyframes shimmer {
   0% {
     background-position: top left;
