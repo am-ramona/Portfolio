@@ -95,16 +95,22 @@ canvas {
   height:98vmin;
 }
 
+/* #shimmeryComingSoon h1 {
+        font-family: "glamor";
+        font-family: "Athene";
+        font-family: "Zefani";
+        font-weight: 300;
+        font-size: 3em;
+        margin: 0 auto;
+        padding: 0 140px 0 100px;
+        /* display: inline;
+        margin-bottom: 0; */
+      /* } */ 
+
 #shimmeryComingSoon h1 {
-  font-family: "glamor";
-  font-family: "Athene";
   font-family: "Zefani";
   font-weight: 300;
   font-size: 3em;
-  margin: 0 auto;
-  padding: 0 140px 0 100px;
-  /* display: inline;
-  margin-bottom: 0; */
 }
 
 /* #shimmeryComingSoon h1 {
