@@ -148,7 +148,9 @@ canvas {
 
 #shimmeryComingSoon h1 {
   color: rgba(255,255,255,0.1);
-  background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) no-repeat top left / 125px 100% text;
+  background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) no-repeat top left;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
   animation: shimmer 4s infinite
 }
 
