@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('Lato-Hairline.eot');
+    src: url('Lato-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('Lato-Hairline.woff2') format('woff2'),
+        url('Lato-Hairline.woff') format('woff'),
+        url('Lato-Hairline.ttf') format('truetype'),
+        url('Lato-Hairline.svg#Lato-Hairline') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

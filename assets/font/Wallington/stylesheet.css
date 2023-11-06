@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Wallington';
+    src: url('Wallington-Regular.eot');
+    src: url('Wallington-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Wallington-Regular.woff2') format('woff2'),
+        url('Wallington-Regular.woff') format('woff'),
+        url('Wallington-Regular.ttf') format('truetype'),
+        url('Wallington-Regular.svg#Wallington-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
