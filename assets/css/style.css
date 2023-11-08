@@ -485,8 +485,8 @@ section .container {
     top: 80px;
   }
 
-  .section-title p {
-      font-size: 24px;
+  .about-me .section-title p {
+    font-size: 24px;
   }
 }
 
