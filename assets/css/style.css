@@ -14,12 +14,12 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('assets/font/Lato/Lato-Regular/Lato-Regular.eot');
-  src: url('assets/font/Lato/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.woff') format('woff'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.ttf') format('truetype'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.svg#Lato-Regular') format('svg');
+  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot');
+  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.woff') format('woff'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.ttf') format('truetype'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.svg#Lato-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,12 +27,12 @@
 
 @font-face {
   font-family: 'Lato Hairline';
-  src: url('assets/font/Lato/Lato-Hairline/Lato-Hairline.eot');
-  src: url('assets/font/Lato/Lato-Hairline/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
-    url('assets/font/Lato/Lato-Hairline/Lato-Hairline.woff2') format('woff2'),
-    url('assets/font/Lato/Lato-Hairline/Lato-Hairline.woff') format('woff'),
-    url('assets/font/Lato/Lato-Hairline/Lato-Hairline.ttf') format('truetype'),
-    url('assets/font/Lato/Lato-Hairline/Lato-Hairline.svg#Lato-Hairline') format('svg');
+  src: url('../font/Lato/Lato-Hairline/Lato-Hairline.eot');
+  src: url('../font/Lato/Lato-Hairline/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
+    url('../font/Lato/Lato-Hairline/Lato-Hairline.woff2') format('woff2'),
+    url('../font/Lato/Lato-Hairline/Lato-Hairline.woff') format('woff'),
+    url('../font/Lato/Lato-Hairline/Lato-Hairline.ttf') format('truetype'),
+    url('../font/Lato/Lato-Hairline/Lato-Hairline.svg#Lato-Hairline') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -40,12 +40,12 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('assets/font/Lato/Lato-Light/Lato-Light.eot');
-  src: url('assets/font/Lato/Lato-Light/Lato-Light.eot?#iefix') format('embedded-opentype'),
-    url('assets/font/Lato/Lato-Light/Lato-Light.woff2') format('woff2'),
-    url('assets/font/Lato/Lato-Light/Lato-Light.woff') format('woff'),
-    url('assets/font/Lato/Lato-Light/Lato-Light.ttf') format('truetype'),
-    url('assets/font/Lato/Lato-Light/Lato-Light.svg#Lato-Light') format('svg');
+  src: url('../font/Lato/Lato-Light/Lato-Light.eot');
+  src: url('../font/Lato/Lato-Light/Lato-Light.eot?#iefix') format('embedded-opentype'),
+    url('../font/Lato/Lato-Light/Lato-Light.woff2') format('woff2'),
+    url('../font/Lato/Lato-Light/Lato-Light.woff') format('woff'),
+    url('../font/Lato/Lato-Light/Lato-Light.ttf') format('truetype'),
+    url('../font/Lato/Lato-Light/Lato-Light.svg#Lato-Light') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -53,12 +53,12 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('assets/font/Lato/Lato-Regular/Lato-Regular.eot');
-  src: url('assets/font/Lato/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.woff') format('woff'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.ttf') format('truetype'),
-    url('assets/font/Lato/Lato-Regular/Lato-Regular.svg#Lato-Regular') format('svg');
+  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot');
+  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.woff') format('woff'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.ttf') format('truetype'),
+    url('../font/Lato/Lato-Regular/Lato-Regular.svg#Lato-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -66,13 +66,26 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('assets/font/Lato/Lato-Thin/Lato-Thin.eot');
-  src: url('assets/font/Lato/Lato-Thin/Lato-Thin.eot?#iefix') format('embedded-opentype'),
-    url('assets/font/Lato/Lato-Thin/Lato-Thin.woff2') format('woff2'),
-    url('assets/font/Lato/Lato-Thin/Lato-Thin.woff') format('woff'),
-    url('assets/font/Lato/Lato-Thin/Lato-Thin.ttf') format('truetype'),
-    url('assets/font/Lato/Lato-Thin/Lato-Thin.svg#Lato-Thin') format('svg');
+  src: url('../font/Lato/Lato-Thin/Lato-Thin.eot');
+  src: url('../font/Lato/Lato-Thin/Lato-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../font/Lato/Lato-Thin/Lato-Thin.woff2') format('woff2'),
+    url('../font/Lato/Lato-Thin/Lato-Thin.woff') format('woff'),
+    url('../font/Lato/Lato-Thin/Lato-Thin.ttf') format('truetype'),
+    url('../font/Lato/Lato-Thin/Lato-Thin.svg#Lato-Thin') format('svg');
   font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('../font/Great-Vibes/GreatVibes-Regular.eot');
+  src: url('../font/Great-Vibes/GreatVibes-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../font/Great-Vibes/GreatVibes-Regular.woff2') format('woff2'),
+      url('../font/Great-Vibes/GreatVibes-Regular.woff') format('woff'),
+      url('../font/Great-Vibes/GreatVibes-Regular.ttf') format('truetype'),
+      url('../font/Great-Vibes/GreatVibes-Regular.svg#GreatVibes-Regular') format('svg');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -255,7 +268,7 @@ h6 {
 }
 
 @media (max-width: 992px) {
-  #header h1 a{
+  #header h1 a {
     font-size: 19px;
     letter-spacing: 7px;
     direction: rtl;
@@ -321,10 +334,10 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
   transition: 0.3s;
-    line-height: 1px;
-    letter-spacing: 2px;
-    /* text-transform: uppercase; */
-    color: #aaaaaa;
+  line-height: 1px;
+  letter-spacing: 2px;
+  /* text-transform: uppercase; */
+  color: #aaaaaa;
 }
 
 .navbar a i,
@@ -486,17 +499,16 @@ section .container {
   height: 1px;
   display: inline-block;
   /* background: #4ceb95; */
-  background: #AD97A9;
+  background: #1AB385;
   margin: 4px 10px;
 }
 
 .section-title p {
-  margin: 0;
   margin: -15px 0 15px 0;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 100;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #F1FAFF;
 }
 
@@ -504,9 +516,10 @@ section .container {
 # About
 --------------------------------------------------------------*/
 .about-me .content h3 {
-  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   font-size: 26px;
-  color: #E0BDCE;
+  color: #65EBBA;
 }
 
 .about-me .content ul {
@@ -518,17 +531,18 @@ section .container {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  color: #53505B;
+  color: rgb(241 250 255 / 75%);
 }
 
 .about-me .content ul strong {
+  color: rgb(241 250 255 / 75%);
   margin-right: 10px;
 }
 
 .about-me .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #7D7382;
+  color: #F1FAFF;
   line-height: 0;
   /* color: #a3a8b3; */
   font-weight: 300;
@@ -545,7 +559,7 @@ section .container {
   letter-spacing: 1.3px;
   line-height: 1.4;
   padding: 0 1.5rem;
-  color: #7D7382;
+  color: #F1FAFF;
 }
 
 .about-me .content p:last-child {
@@ -575,7 +589,7 @@ section .container {
   font-size: 24px;
   background: rgba(255, 255, 255, 0.1);
   padding: 12px;
-  color: #E0BDCE;
+  color: #65EBBA;
   border-radius: 50px;
   line-height: 0;
 }
@@ -627,7 +641,7 @@ section .container {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #E0BDCE;
+  background-color: #65EBBA;
 }
 
 /*--------------------------------------------------------------
@@ -648,15 +662,52 @@ section .container {
 }
 
 .interests .icon-box h3 {
-  font-weight: 700;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-size: 16px;
   color: #F1FAFF;
+  font-family: 'Lato';
 }
 
 .interests .icon-box:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/*--------------------------------------------------------------
+# Awards
+--------------------------------------------------------------*/
+.awards .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: ease-in-out 0.3s;
+}
+
+.awards .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.awards .icon-box h3 {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+  color: #F1FAFF;
+  font-family: 'Lato';
+}
+
+.awards .icon-box h3 span {
+  font-size: 13px;
+  color: #65EBBA;
+}
+
+.awards .icon-box:hover {
   background: rgba(255, 255, 255, 0.12);
 }
 
@@ -738,7 +789,7 @@ section .container {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #E0BDCE;
+  background-color: #65EBBA;
 }
 
 /*--------------------------------------------------------------
@@ -1284,7 +1335,7 @@ section .container {
   z-index: 999999;
 }
 
-.credits > span {
+.credits>span {
   color: #65EBBA;
 }
 
