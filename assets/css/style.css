@@ -257,9 +257,9 @@ h6 {
 @media (max-width: 992px) {
   #header h1 a{
     font-size: 19px;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     direction: rtl;
-    text-indent: -5px;
+    text-indent: -7px;
   }
 
   #header h2 span {
