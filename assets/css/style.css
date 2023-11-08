@@ -210,32 +210,6 @@ h6 {
   background: #65EBBA;
 }
 
-@media (max-width: 992px) {
-  #header h1 {
-    font-size: 19px;
-    letter-spacing: 3px;
-  }
-
-  #header h2 span {
-    padding-bottom: 0;
-  }
-
-  #header h2 {
-    font-size: 15px;
-    line-height: 30px;
-  }
-
-  #header .social-links {
-    margin-top: 15px;
-  }
-
-  #header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 /* Header Top */
 #header.header-top {
   height: 80px;
@@ -277,6 +251,34 @@ h6 {
 
   #header.header-top h1 {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 992px) {
+  #header h1 a{
+    font-size: 19px;
+    letter-spacing: 3px;
+    direction: rtl;
+    text-indent: -3px;
+  }
+
+  #header h2 span {
+    padding-bottom: 0;
+  }
+
+  #header h2 {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  #header .social-links {
+    margin-top: 15px;
+  }
+
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
