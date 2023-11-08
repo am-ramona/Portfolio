@@ -258,6 +258,10 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  #header h1 {
+    align-self: flex-start;
+  }
+
   #header.header-top {
     height: 60px;
   }
@@ -479,6 +483,10 @@ section .container {
 
   section.section-show {
     top: 80px;
+  }
+
+  .section-title p {
+      font-size: 24px;
   }
 }
 
