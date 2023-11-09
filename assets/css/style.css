@@ -986,7 +986,7 @@ section .container {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  background: #E0BDCE;
+  background: #65EBBA;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -999,6 +999,7 @@ section .container {
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  max-height: 164px;
 }
 
 .portfolio .portfolio-wrap::before {
