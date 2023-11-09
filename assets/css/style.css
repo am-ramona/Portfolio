@@ -81,10 +81,10 @@
   font-family: 'Great Vibes';
   src: url('../font/Great-Vibes/GreatVibes-Regular.eot');
   src: url('../font/Great-Vibes/GreatVibes-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/Great-Vibes/GreatVibes-Regular.woff2') format('woff2'),
-      url('../font/Great-Vibes/GreatVibes-Regular.woff') format('woff'),
-      url('../font/Great-Vibes/GreatVibes-Regular.ttf') format('truetype'),
-      url('../font/Great-Vibes/GreatVibes-Regular.svg#GreatVibes-Regular') format('svg');
+    url('../font/Great-Vibes/GreatVibes-Regular.woff2') format('woff2'),
+    url('../font/Great-Vibes/GreatVibes-Regular.woff') format('woff'),
+    url('../font/Great-Vibes/GreatVibes-Regular.ttf') format('truetype'),
+    url('../font/Great-Vibes/GreatVibes-Regular.svg#GreatVibes-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -543,12 +543,12 @@ section .container {
 .about-me .content ul li {
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
-  color: rgb(241 250 255 / 75%);
+  /* align-items: center; */
+  color: rgb(101 235 186 / 70%);
 }
 
 .about-me .content ul strong {
-  color: rgb(241 250 255 / 75%);
+  color: rgb(101 235 186 / 70%);
   margin-right: 10px;
 }
 
@@ -693,7 +693,12 @@ section .container {
 # Awards
 --------------------------------------------------------------*/
 .awards .icon-box {
-  display: flex;
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'c d';
+  grid-template-columns: 32px auto;
+  grid-column-gap: 10px;
   align-items: center;
   padding: 20px;
   background: rgba(255, 255, 255, 0.08);
@@ -702,7 +707,6 @@ section .container {
 
 .awards .icon-box i {
   font-size: 32px;
-  padding-right: 10px;
   line-height: 1;
 }
 
@@ -716,9 +720,10 @@ section .container {
   font-family: 'Lato';
 }
 
-.awards .icon-box h3 span {
+.awards .icon-box h3 + span {
   font-size: 13px;
-  color: #65EBBA;
+  grid-area: d;
+  color: rgb(101 235 186 / 70%);
 }
 
 .awards .icon-box:hover {
