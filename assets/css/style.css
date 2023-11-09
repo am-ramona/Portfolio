@@ -488,6 +488,10 @@ section .container {
   .about-me .section-title p {
     font-size: 24px;
   }
+
+  .about-me .content p {
+    text-align: center;
+  }
 }
 
 .section-title h2 {
