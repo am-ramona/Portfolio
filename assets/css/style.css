@@ -490,7 +490,7 @@ section .container {
   }
 
   .about-me .content p {
-    text-align: center;
+    text-indent: 15px;
   }
 }
 
@@ -573,6 +573,7 @@ section .container {
   line-height: 1.4;
   padding: 0 1.5rem;
   color: #F1FAFF;
+  text-indent: 30px;
 }
 
 .about-me .content p:last-child {
