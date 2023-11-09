@@ -874,13 +874,14 @@ section .container {
   background: rgba(204, 204, 204, 0.1);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
+  width: 100%;
 }
 
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #E0BDCE;
+  background: #1AB385;
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   display: flex;
@@ -925,8 +926,8 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #E0BDCE;
-  border-color: #E0BDCE;
+  background: #65EBBA;
+  border-color: #65EBBA;
 }
 
 .services .icon-box:hover .icon {
@@ -934,7 +935,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon i {
-  color: #E0BDCE;
+  color: #65EBBA;
 }
 
 .services .icon-box:hover .icon::before {
