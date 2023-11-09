@@ -120,7 +120,7 @@ body::before {
 }
 
 a {
-  color: #E0BDCE;
+  color: #65EBBA;
   text-decoration: none;
 }
 
@@ -1196,7 +1196,7 @@ section .container {
 
 .contact .info-box i.bx {
   font-size: 24px;
-  color: #E0BDCE;
+  color: #65EBBA;
   border-radius: 50%;
   padding: 14px;
   float: left;
@@ -1233,7 +1233,7 @@ section .container {
 }
 
 .contact .info-box .social-links a:hover {
-  color: #E0BDCE;
+  color: #65EBBA;
 }
 
 .contact .php-email-form {
