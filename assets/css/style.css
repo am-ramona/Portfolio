@@ -489,7 +489,7 @@ section .container {
     font-size: 24px;
   }
 
-  .about-me .content p {
+  .about-me .content h3 + p {
     text-indent: 15px;
   }
 }
@@ -529,10 +529,11 @@ section .container {
 # About
 --------------------------------------------------------------*/
 .about-me .content h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 300;
   font-size: 26px;
   color: #65EBBA;
+  letter-spacing: 2px;
 }
 
 .about-me .content ul {
