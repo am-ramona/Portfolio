@@ -1182,7 +1182,7 @@ section .container {
 }
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #E0BDCE;
+  background-color: #65EBBA;
 }
 
 /*--------------------------------------------------------------
@@ -1370,7 +1370,7 @@ section .container {
 }
 
 .credits a {
-  color: #E0BDCE;
+  color: #65EBBA;
   transition: 0.3s;
 }
 
