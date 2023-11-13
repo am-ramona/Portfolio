@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Handjet';
+    src: url('Handjet-Thin.eot');
+    src: url('Handjet-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Handjet-Thin.woff2') format('woff2'),
+        url('Handjet-Thin.woff') format('woff'),
+        url('Handjet-Thin.ttf') format('truetype'),
+        url('Handjet-Thin.svg#Handjet-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Rubik Dirt';
+    src: url('RubikDirt-Regular.eot');
+    src: url('RubikDirt-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RubikDirt-Regular.woff2') format('woff2'),
+        url('RubikDirt-Regular.woff') format('woff'),
+        url('RubikDirt-Regular.ttf') format('truetype'),
+        url('RubikDirt-Regular.svg#RubikDirt-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

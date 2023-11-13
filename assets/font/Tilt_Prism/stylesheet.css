@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Tilt Prism';
+    src: url('TiltPrism-Regular.eot');
+    src: url('TiltPrism-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TiltPrism-Regular.woff2') format('woff2'),
+        url('TiltPrism-Regular.woff') format('woff'),
+        url('TiltPrism-Regular.ttf') format('truetype'),
+        url('TiltPrism-Regular.svg#TiltPrism-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
