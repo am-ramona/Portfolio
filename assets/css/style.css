@@ -282,7 +282,7 @@ h6 {
   color: #F1FAFF;
   /* border-bottom: 2px solid #18d26e; */
   /* border-bottom: 2px solid #E0BDCE; */
-  border-bottom: 2px solid #1AB385;
+  border-bottom: 1px solid #1AB385;
   padding-bottom: 6px;
 }
 
@@ -388,6 +388,10 @@ h6 {
     flex-direction: column;
     align-items: center;
   }
+
+  .about-me .row .content h3 {
+    font-size: 19px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -446,7 +450,7 @@ h6 {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   bottom: -15px;
   left: 0;
   background-color: #1AB385;
@@ -703,6 +707,7 @@ section .container {
 }
 
 .counts .count-box span {
+  font-family: 'Poiret One', sans-serif;
   font-size: 36px;
   display: inline-block;
   font-weight: 600;
@@ -712,7 +717,8 @@ section .container {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: 'Poiret One', sans-serif;
   font-size: 14px;
 }
 
@@ -732,7 +738,8 @@ section .container {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Poiret One', sans-serif;
   color: #F1FAFF;
 }
 
@@ -743,11 +750,13 @@ section .container {
 
 .skills .progress-bar-wrap {
   background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .skills .progress-bar {
   width: 1px;
-  height: 10px;
+  height: 3px;
+  border-radius: 10px;
   transition: 0.9s;
   background-color: #65EBBA;
 }
@@ -790,8 +799,9 @@ section .container {
   display: grid;
   grid-template-areas:
     'a b'
-    'c d';
+    'a d';
   grid-template-columns: 32px auto;
+  grid-template-rows: minmax(32px, auto) auto;
   grid-column-gap: 10px;
   align-items: center;
   padding: 20px;
@@ -800,6 +810,7 @@ section .container {
 }
 
 .awards .icon-box i {
+  grid-area: a;
   font-size: 32px;
   line-height: 1;
 }
@@ -847,6 +858,7 @@ section .container {
 }
 
 .testimonials .testimonial-item h3 {
+  font-family:'Handjet', sans-serif;
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
@@ -879,6 +891,7 @@ section .container {
 }
 
 .testimonials .testimonial-item p {
+  font-family:'Poiret One', sans-serif;
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
@@ -1018,6 +1031,9 @@ section .container {
 }
 
 .services .icon-box h4 a {
+  font-family: 'Handjet';
+  font-size: 21px;
+  font-weight: 300;
   color: #F1FAFF;
 }
 
@@ -1047,6 +1063,7 @@ section .container {
 .services .icon-box:hover h4 a,
 .services .icon-box:hover p {
   color: #F1FAFF;
+  font-weight: normal;
 }
 
 /*--------------------------------------------------------------
@@ -1284,6 +1301,12 @@ section .container {
 # Contact
 --------------------------------------------------------------*/
 .contact .info-box {
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+      'a b'
+      'a c';
+  grid-template-columns: 52px auto;
   color: #444444;
   padding: 20px;
   width: 100%;
@@ -1291,31 +1314,37 @@ section .container {
 }
 
 .contact .info-box i.bx {
+  grid-area:a;
   font-size: 24px;
   color: #65EBBA;
   border-radius: 50%;
   padding: 14px;
   float: left;
   background: rgba(255, 255, 255, 0.1);
+  max-height: 52px;
 }
 
 .contact .info-box h3 {
+  font-family: 'handjet', sans-serif;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
-  margin: 10px 0 8px 68px;
+  margin: 10px 0 8px 15px;
+  letter-spacing: 3px;
 }
 
 .contact .info-box p {
+  font-family: 'Handjet';
+  font-size: 17px;
   padding: 0;
   color: #F1FAFF;
   line-height: 24px;
-  font-size: 14px;
-  margin: 0 0 0 68px;
+  /* font-size: 14px; */
+  margin: 0 0 0 15px;
 }
 
 .contact .info-box .social-links {
-  margin: 5px 0 0 68px;
+  margin: 5px 0 0 15px;
   display: flex;
 }
 
