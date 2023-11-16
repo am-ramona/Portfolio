@@ -195,7 +195,8 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #0e0f11 url("../img/bg.jpg") top right no-repeat;
+  background: #0e0f11;
+  /* background: #0e0f11 url("../img/bg.jpg") top right no-repeat; */
   background-size: cover;
   left: 0;
   right: 0;
@@ -280,10 +281,15 @@ h6 {
 
 #header h2 span {
   color: #F1FAFF;
+  /* color: #1AB385; */
   /* border-bottom: 2px solid #18d26e; */
   /* border-bottom: 2px solid #E0BDCE; */
   border-bottom: 1px solid #1AB385;
   padding-bottom: 6px;
+  /* -webkit-text-fill-color: transparent; */
+  /* background: rgb(170,170,170); */
+/* background: linear-gradient(90deg, rgba(170,170,170,1) 0%, rgba(101,235,186,1) 50%, rgba(170,170,170,1) 100%); */
+  /* -webkit-background-clip: text; */
 }
 
 #header img {
