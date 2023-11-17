@@ -1380,14 +1380,13 @@ section .container {
 .contact .info-box .social-links a {
   font-size: 18px;
   display: inline-block;
-  color: #F1FAFF;
   line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
 }
 
 .contact .info-box .social-links a:hover {
-  color: #65EBBA;
+  color: var(--bs-link-hover-color-rgb);
 }
 
 .contact .php-email-form {
