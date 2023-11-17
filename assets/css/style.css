@@ -181,21 +181,43 @@
   font-display: swap;
 }
 
+:root {
+  --black: #010101;
+  --green: #7bAE37;
+  --lightGreen: #BCFD49;
+  --aquamarine: #62FCAF;
+  /* --white: #F2F1F1; */
+  --white: #F0FFFF;
+  --pink: #E3A393;
+  --bs-body-color: #F0FFFF;
+  --bs-link-color-rgb: #F0FFFF;
+  /* --bs-link-hover-color-rgb: #BCFE49; */
+  --bs-link-hover-color-rgb: #B6B544;
+  --bs-progress-bar-color: #B6B544;
+  --bs-progress-bar-bg: #B6B544;
+  --roti: #B6B544;
+  --twilightBlue: #F0FFFF;
+  --grey: #797986;
+  --lightGrey: #BBBCBE;
+
+  /* --bs-body-font-family: ; */
+}
+
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   /* font-family: 'Lato'; */
   /* font-weight: normal; */
   /* background-color: #040404; */
-  Background-color: #0e0f11;
-  color: #F1FAFF;
-  position: relative;
-  background: transparent;
+  /* Background-color: #0e0f11; */
+  /* color: #F1FAFF; */
+  /* position: relative; */
+  /* background: transparent; */
 }
 
 body::before {
   content: "";
   position: fixed;
-  background: #0e0f11;
+  background: var(--black);
   /* background: #0e0f11 url("../img/bg.jpg") top right no-repeat; */
   background-size: cover;
   left: 0;
@@ -212,12 +234,10 @@ body::before {
 }
 
 a {
-  color: #65EBBA;
   text-decoration: none;
 }
 
 a:hover {
-  color: #35e888;
   text-decoration: none;
 }
 
@@ -231,6 +251,13 @@ h4,
 h5,
 h6 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
+p {
+  color: var(--white);
 }
 
 /*--------------------------------------------------------------
@@ -261,11 +288,9 @@ h6 {
 
 #header h1 a,
 #header h1 a:hover {
-  color: #F1FAFF;
   line-height: 1;
   display: inline-block;
   font-weight: 100;
-  /* font-size: 3rem; */
   letter-spacing: 9px;
 }
 
@@ -276,16 +301,15 @@ h6 {
   /* font-family: inherit; */
   letter-spacing: 1.3px;
   margin-top: 20px;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 #header h2 span {
-  color: #F1FAFF;
+  color: var(--bs-link-hover-color-rgb);
   /* color: #1AB385; */
   /* border-bottom: 2px solid #18d26e; */
   /* border-bottom: 2px solid #E0BDCE; */
-  border-bottom: 1px solid #1AB385;
-  padding-bottom: 6px;
+  /* border-bottom: 1px solid #1AB385; */
+  /* padding-bottom: 6px; */
   /* -webkit-text-fill-color: transparent; */
   /* background: rgb(170,170,170); */
 /* background: linear-gradient(90deg, rgba(170,170,170,1) 0%, rgba(101,235,186,1) 50%, rgba(170,170,170,1) 100%); */
@@ -317,7 +341,7 @@ h6 {
 }
 
 #header .social-links a:hover {
-  background: #65EBBA;
+  background: var(--bs-link-hover-color-rgb);
 }
 
 /* Header Top */
@@ -436,13 +460,12 @@ h6 {
   /* font-family: "Poppins", sans-serif; */
   font-size: 16px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--lightGrey);
   white-space: nowrap;
   transition: 0.3s;
   line-height: 1px;
   letter-spacing: 2px;
   /* text-transform: uppercase; */
-  color: #aaaaaa;
 }
 
 .navbar a i,
@@ -459,7 +482,7 @@ h6 {
   height: 1px;
   bottom: -15px;
   left: 0;
-  background-color: #1AB385;
+  background-color: var(--bs-link-hover-color-rgb);
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -476,7 +499,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #F1FAFF;
+  color: var(--white);
 }
 
 /**
@@ -612,8 +635,7 @@ section .container {
   width: 120px;
   height: 1px;
   display: inline-block;
-  /* background: #4ceb95; */
-  background: #1AB385;
+  background: var(--bs-link-hover-color-rgb);
   margin: 4px 10px;
 }
 
@@ -623,7 +645,6 @@ section .container {
   font-weight: 100;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
-  color: #F1FAFF;
 }
 
 /*--------------------------------------------------------------
@@ -634,7 +655,7 @@ section .container {
   font-family: 'Poiret One', sans-serif;
   font-weight: 500;
   font-size: 26px;
-  color: #65EBBA;
+  color: var(--bs-link-hover-color-rgb);
   letter-spacing: 2px;
 }
 
@@ -648,20 +669,18 @@ section .container {
   margin-bottom: 20px;
   display: flex;
   /* align-items: center; */
-  color: rgb(101 235 186 / 70%);
+  color: var(--bs-link-hover-color-rgb);
 }
 
 .about-me .content ul strong {
-  color: rgb(101 235 186 / 70%);
+  color: var(--bs-link-hover-color-rgb);
   margin-right: 10px;
 }
 
 .about-me .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #F1FAFF;
   line-height: 0;
-  /* color: #a3a8b3; */
   font-weight: 300;
   font-size: 1em;
   letter-spacing: 1.3px;
@@ -675,9 +694,7 @@ section .container {
   letter-spacing: 1.3px;
   line-height: 1.4;
   padding: 0 1.5rem;
-  color: #dee0e3;
-  /* color: #F1FAFF; */
-  /* text-indent: 30px; */
+  color: var(--white);
 }
 
 .about-me .content p:last-child {
@@ -707,7 +724,7 @@ section .container {
   font-size: 24px;
   background: rgba(255, 255, 255, 0.1);
   padding: 12px;
-  color: #65EBBA;
+  color: var(--bs-link-hover-color-rgb);
   border-radius: 50px;
   line-height: 0;
 }
@@ -764,12 +781,23 @@ section .container {
   height: 3px;
   border-radius: 10px;
   transition: 0.9s;
-  background-color: #65EBBA;
+  background-color: var(--roti);
+}
+
+/*--------------------------------------------------------------
+# Awards, Interests, Organizations
+--------------------------------------------------------------*/
+
+.icon-box i {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--roti);
 }
 
 /*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
+
 .interests .icon-box {
   display: flex;
   align-items: center;
@@ -779,9 +807,7 @@ section .container {
 }
 
 .interests .icon-box i {
-  font-size: 32px;
   padding-right: 10px;
-  line-height: 1;
 }
 
 .interests .icon-box h3 {
@@ -817,8 +843,6 @@ section .container {
 
 .awards .icon-box i {
   grid-area: a;
-  font-size: 32px;
-  line-height: 1;
 }
 
 .awards .icon-box h3 {
@@ -834,7 +858,7 @@ section .container {
 .awards .icon-box h3 + span {
   font-size: 13px;
   grid-area: d;
-  color: rgb(101 235 186 / 70%);
+  color: var(--roti);
 }
 
 .awards .icon-box:hover {
@@ -868,12 +892,12 @@ section .container {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: #F1FAFF;
+  color: var(--twilightBlue);
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #999;
+  color: var(--grey);
   margin: 0 0 0 45px;
 }
 
@@ -901,8 +925,8 @@ section .container {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
+  color: var(--twilightBlue);
   background: rgba(255, 255, 255, 0.1);
-  position: relative;
   border-radius: 6px;
   position: relative;
   z-index: 1;
@@ -923,7 +947,7 @@ section .container {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #65EBBA;
+  background-color: var(--roti);
 }
 
 /*--------------------------------------------------------------
@@ -1002,7 +1026,7 @@ section .container {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #1AB385;
+  background: var(--roti);
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   display: flex;
@@ -1050,8 +1074,8 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #65EBBA;
-  border-color: #65EBBA;
+  background: var(--roti);
+  border-color: var(--roti);
 }
 
 .services .icon-box:hover .icon {
@@ -1059,11 +1083,11 @@ section .container {
 }
 
 .services .icon-box:hover .icon i {
-  color: #65EBBA;
+  color: var(--roti);
 }
 
 .services .icon-box:hover .icon::before {
-  background: #35e888;
+  background: var(--roti);
 }
 
 .services .icon-box:hover h4 a,
@@ -1105,7 +1129,7 @@ section .container {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  background: #65EBBA;
+  background: var(--roti);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1313,7 +1337,6 @@ section .container {
       'a b'
       'a c';
   grid-template-columns: 52px auto;
-  color: #444444;
   padding: 20px;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
@@ -1322,7 +1345,7 @@ section .container {
 .contact .info-box i.bx {
   grid-area:a;
   font-size: 24px;
-  color: #65EBBA;
+  color: var(--roti);
   border-radius: 50%;
   padding: 14px;
   float: left;
@@ -1511,15 +1534,15 @@ section .container {
 /**  ScrollBar STYLE  */
 .testimonials ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #0E0F11;
+	background-color: var(--black);
 }
 
 .testimonials ::-webkit-scrollbar {
 	width: 3px;
-	background-color: #0E0F11;
+	background-color: var(--black);
 }
 
 .testimonials ::-webkit-scrollbar-thumb {
-	background-color: #65EBBA;
+	background-color: var(--roti);
   border-radius: 10px;
 }
