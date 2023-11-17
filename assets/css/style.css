@@ -1333,7 +1333,7 @@ section .container {
 .contact .info-box h3 {
   font-family: 'handjet', sans-serif;
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #aaaaaa;
   font-weight: 700;
   margin: 10px 0 8px 15px;
   letter-spacing: 3px;
