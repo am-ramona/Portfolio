@@ -94,10 +94,10 @@
   font-family: 'Tilt Prism';
   src: url('../font/Tilt_Prism/TiltPrism-Regular.eot');
   src: url('../font/Tilt_Prism/TiltPrism-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/Tilt_Prism/TiltPrism-Regular.woff2') format('woff2'),
-      url('../font/Tilt_Prism/TiltPrism-Regular.woff') format('woff'),
-      url('../font/Tilt_Prism/TiltPrism-Regular.ttf') format('truetype'),
-      url('../font/Tilt_Prism/TiltPrism-Regular.svg#TiltPrism-Regular') format('svg');
+    url('../font/Tilt_Prism/TiltPrism-Regular.woff2') format('woff2'),
+    url('../font/Tilt_Prism/TiltPrism-Regular.woff') format('woff'),
+    url('../font/Tilt_Prism/TiltPrism-Regular.ttf') format('truetype'),
+    url('../font/Tilt_Prism/TiltPrism-Regular.svg#TiltPrism-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -107,10 +107,10 @@
   font-family: 'Rubik Moonrocks';
   src: url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.eot');
   src: url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff2') format('woff2'),
-      url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff') format('woff'),
-      url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.ttf') format('truetype'),
-      url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.svg#RubikMoonrocks-Regular') format('svg');
+    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff2') format('woff2'),
+    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff') format('woff'),
+    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.ttf') format('truetype'),
+    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.svg#RubikMoonrocks-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -120,10 +120,10 @@
   font-family: 'Fredericka the Great';
   src: url('../font/Frederica_The_Great/FrederickatheGreat-Regular.eot');
   src: url('../font/Frederica_The_Great/FrederickatheGreat-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff2') format('woff2'),
-      url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff') format('woff'),
-      url('../font/Frederica_The_Great/FrederickatheGreat-Regular.ttf') format('truetype'),
-      url('../font/Frederica_The_Great/FrederickatheGreat-Regular.svg#FrederickatheGreat-Regular') format('svg');
+    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff2') format('woff2'),
+    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff') format('woff'),
+    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.ttf') format('truetype'),
+    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.svg#FrederickatheGreat-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -133,10 +133,10 @@
   font-family: 'Rubik Dirt';
   src: url('../font/Rubik_Dirt/RubikDirt-Regular.eot');
   src: url('../font/Rubik_Dirt/RubikDirt-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/Rubik_Dirt/RubikDirt-Regular.woff2') format('woff2'),
-      url('../font/Rubik_Dirt/RubikDirt-Regular.woff') format('woff'),
-      url('../font/Rubik_Dirt/RubikDirt-Regular.ttf') format('truetype'),
-      url('../font/Rubik_Dirt/RubikDirt-Regular.svg#RubikDirt-Regular') format('svg');
+    url('../font/Rubik_Dirt/RubikDirt-Regular.woff2') format('woff2'),
+    url('../font/Rubik_Dirt/RubikDirt-Regular.woff') format('woff'),
+    url('../font/Rubik_Dirt/RubikDirt-Regular.ttf') format('truetype'),
+    url('../font/Rubik_Dirt/RubikDirt-Regular.svg#RubikDirt-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -146,10 +146,10 @@
   font-family: 'Handjet';
   src: url('../font/Handjet/Handjet-Thin.eot');
   src: url('../font/Handjet/Handjet-Thin.eot?#iefix') format('embedded-opentype'),
-      url('../font/Handjet/Handjet-Thin.woff2') format('woff2'),
-      url('../font/Handjet/Handjet-Thin.woff') format('woff'),
-      url('../font/Handjet/Handjet-Thin.ttf') format('truetype'),
-      url('../font/Handjet/Handjet-Thin.svg#Handjet-Thin') format('svg');
+    url('../font/Handjet/Handjet-Thin.woff2') format('woff2'),
+    url('../font/Handjet/Handjet-Thin.woff') format('woff'),
+    url('../font/Handjet/Handjet-Thin.ttf') format('truetype'),
+    url('../font/Handjet/Handjet-Thin.svg#Handjet-Thin') format('svg');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -159,10 +159,10 @@
   font-family: 'Handjet';
   src: url('../font/Handjet/Handjet-Regular.eot');
   src: url('../font/Handjet/Handjet-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/Handjet/Handjet-Regular.woff2') format('woff2'),
-      url('../font/Handjet/Handjet-Regular.woff') format('woff'),
-      url('../font/Handjet/Handjet-Regular.ttf') format('truetype'),
-      url('../font/Handjet/Handjet-Regular.svg#Handjet-Regular') format('svg');
+    url('../font/Handjet/Handjet-Regular.woff2') format('woff2'),
+    url('../font/Handjet/Handjet-Regular.woff') format('woff'),
+    url('../font/Handjet/Handjet-Regular.ttf') format('truetype'),
+    url('../font/Handjet/Handjet-Regular.svg#Handjet-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -172,10 +172,10 @@
   font-family: 'Poiret One';
   src: url('../font/PoiretOne/PoiretOne-Regular.eot');
   src: url('../font/PoiretOne/PoiretOne-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../font/PoiretOne/PoiretOne-Regular.woff2') format('woff2'),
-      url('../font/PoiretOne/PoiretOne-Regular.woff') format('woff'),
-      url('../font/PoiretOne/PoiretOne-Regular.ttf') format('truetype'),
-      url('../font/PoiretOne/PoiretOne-Regular.svg#PoiretOne-Regular') format('svg');
+    url('../font/PoiretOne/PoiretOne-Regular.woff2') format('woff2'),
+    url('../font/PoiretOne/PoiretOne-Regular.woff') format('woff'),
+    url('../font/PoiretOne/PoiretOne-Regular.ttf') format('truetype'),
+    url('../font/PoiretOne/PoiretOne-Regular.svg#PoiretOne-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -209,13 +209,6 @@
 
 body {
   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  /* font-family: 'Lato'; */
-  /* font-weight: normal; */
-  /* background-color: #040404; */
-  /* Background-color: #0e0f11; */
-  /* color: #F1FAFF; */
-  /* position: relative; */
-  /* background: transparent; */
 }
 
 body::before {
@@ -262,6 +255,10 @@ h6 {
 --------------------------------------------------------------*/
 p {
   color: var(--white);
+}
+
+iframe {
+  background: var(--black);
 }
 
 /*--------------------------------------------------------------
@@ -316,7 +313,7 @@ p {
   /* padding-bottom: 6px; */
   /* -webkit-text-fill-color: transparent; */
   /* background: rgb(170,170,170); */
-/* background: linear-gradient(90deg, rgba(170,170,170,1) 0%, rgba(101,235,186,1) 50%, rgba(170,170,170,1) 100%); */
+  /* background: linear-gradient(90deg, rgba(170,170,170,1) 0%, rgba(101,235,186,1) 50%, rgba(170,170,170,1) 100%); */
   /* -webkit-background-clip: text; */
 }
 
@@ -336,7 +333,7 @@ p {
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  color: #F1FAFF;
+  color: var(--white);
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -510,7 +507,7 @@ p {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #F1FAFF;
+  color: var(--white);
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -618,7 +615,7 @@ section .container {
     margin: 0;
   }
 
-  .about-me .content h3 + p {
+  .about-me .content h3+p {
     text-indent: 15px;
   }
 }
@@ -631,7 +628,7 @@ section .container {
   margin: 0 0 15px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: var(--lightGrey);
   font-family: "Poppins", sans-serif;
 }
 
@@ -739,7 +736,7 @@ section .container {
   font-size: 36px;
   display: inline-block;
   font-weight: 600;
-  color: #F1FAFF;
+  color: var(--white);
 }
 
 .counts .count-box p {
@@ -768,7 +765,7 @@ section .container {
   font-weight: 600;
   /* font-family: "Poppins", sans-serif; */
   font-family: 'Poiret One', sans-serif;
-  color: #F1FAFF;
+  color: var(--white);
 }
 
 .skills .progress .skill .val {
@@ -821,7 +818,7 @@ section .container {
   padding: 0;
   line-height: 1;
   font-size: 16px;
-  color: #F1FAFF;
+  color: var(--white);
   font-family: 'Lato';
 }
 
@@ -856,11 +853,11 @@ section .container {
   padding: 0;
   line-height: 1;
   font-size: 16px;
-  color: #F1FAFF;
+  color: var(--white);
   font-family: 'Lato';
 }
 
-.awards .icon-box h3 + span {
+.awards .icon-box h3+span {
   font-size: 13px;
   grid-area: d;
   color: var(--roti);
@@ -893,7 +890,7 @@ section .container {
 }
 
 .testimonials .testimonial-item h3 {
-  font-family:'Handjet', sans-serif;
+  font-family: 'Handjet', sans-serif;
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
@@ -926,7 +923,7 @@ section .container {
 }
 
 .testimonials .testimonial-item p {
-  font-family:'Poiret One', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
@@ -963,7 +960,7 @@ section .container {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #F1FAFF;
+  color: var(--white);
 }
 
 .resume .resume-item {
@@ -1042,7 +1039,7 @@ section .container {
 }
 
 .services .icon-box .icon i {
-  color: #F1FAFF;
+  color: var(--white);
   font-size: 28px;
 }
 
@@ -1070,7 +1067,7 @@ section .container {
   font-family: 'Handjet';
   font-size: 21px;
   font-weight: 300;
-  color: #F1FAFF;
+  color: var(--white);
 }
 
 .services .icon-box p {
@@ -1085,7 +1082,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: #F1FAFF;
+  background: var(--white);
 }
 
 .services .icon-box:hover .icon i {
@@ -1098,7 +1095,7 @@ section .container {
 
 .services .icon-box:hover h4 a,
 .services .icon-box:hover p {
-  color: #F1FAFF;
+  color: var(--white);
   font-weight: normal;
 }
 
@@ -1126,7 +1123,7 @@ section .container {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #F1FAFF;
+  color: var(--white);
   background: rgba(255, 255, 255, 0.1);
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
@@ -1188,8 +1185,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid #F1FAFF;
-  border-left: 3px solid #F1FAFF;
+  border-top: 3px solid var(--white);
+  border-left: 3px solid var(--white);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -1202,20 +1199,20 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid #F1FAFF;
-  border-right: 3px solid #F1FAFF;
+  border-bottom: 3px solid var(--white);
+  border-right: 3px solid var(--white);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #F1FAFF;
+  color: var(--white);
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #F1FAFF;
+  color: var(--white);
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -1228,7 +1225,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #F1FAFF;
+  color: var(--white);
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
@@ -1236,7 +1233,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #63eda3;
+  color: var(--roti);
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1330,7 +1327,7 @@ section .container {
 }
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color:  var(--roti);
+  background-color: var(--roti);
 }
 
 /*--------------------------------------------------------------
@@ -1340,8 +1337,8 @@ section .container {
   display: grid;
   align-items: center;
   grid-template-areas:
-      'a b'
-      'a c';
+    'a b'
+    'a c';
   grid-template-columns: 52px auto;
   padding: 20px;
   width: 100%;
@@ -1349,7 +1346,7 @@ section .container {
 }
 
 .contact .info-box i.bx {
-  grid-area:a;
+  grid-area: a;
   font-size: 24px;
   color: var(--roti);
   border-radius: 50%;
@@ -1372,7 +1369,7 @@ section .container {
   font-family: 'Handjet';
   font-size: 17px;
   padding: 0;
-  color: #F1FAFF;
+  color: var(--white);
   line-height: 24px;
   /* font-size: 14px; */
   margin: 0 0 0 15px;
@@ -1449,7 +1446,7 @@ section .container {
   background: rgba(255, 255, 255, 0.08);
   border: 0;
   transition: 0.3s;
-  color: #F1FAFF;
+  color: var(--white);
 }
 
 .contact .php-email-form input:focus,
@@ -1481,7 +1478,7 @@ section .container {
   background: #E0BDCE;
   border: 0;
   padding: 10px 30px;
-  color: #F1FAFF;
+  color: var(--white);
   transition: 0.4s;
   border-radius: 4px;
 }
@@ -1511,7 +1508,7 @@ section .container {
   padding: 15px;
   text-align: right;
   font-size: 13px;
-  color: #F1FAFF;
+  color: var(--white);
   z-index: 999999;
 }
 
@@ -1533,21 +1530,21 @@ section .container {
 }
 
 .credits a:hover {
-  color: #F1FAFF;
+  color: var(--white);
 }
 
 /**  ScrollBar STYLE  */
-.testimonials ::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: var(--black);
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--black);
 }
 
-.testimonials ::-webkit-scrollbar {
-	width: 3px;
-	background-color: var(--black);
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: var(--black);
 }
 
-.testimonials ::-webkit-scrollbar-thumb {
-	background-color: var(--roti);
+::-webkit-scrollbar-thumb {
+  background-color: var(--roti);
   border-radius: 10px;
 }
