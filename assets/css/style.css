@@ -1057,6 +1057,7 @@ section .container {
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
+  z-index: -1;
 }
 
 .services .icon-box h4 {
