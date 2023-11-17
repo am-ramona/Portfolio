@@ -200,7 +200,11 @@
   --grey: #797986;
   --lightGrey: #BBBCBE;
 
-  /* --bs-body-font-family: ; */
+  /* --bs-body-font-family
+  --bs-body-font-size
+  --bs-body-font-weight
+  --bs-body-line-height
+  --bs-body-color */
 }
 
 body {
@@ -611,6 +615,7 @@ section .container {
 
   .about-me .section-title p {
     font-size: 24px;
+    margin: 0;
   }
 
   .about-me .content h3 + p {
@@ -623,7 +628,7 @@ section .container {
   font-weight: 500;
   padding: 0;
   line-height: 1px;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
@@ -640,7 +645,7 @@ section .container {
 }
 
 .section-title p {
-  margin: -15px 0 15px 0;
+  margin: 0;
   font-size: 36px;
   font-weight: 100;
   text-transform: uppercase;
@@ -1324,7 +1329,7 @@ section .container {
 }
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #65EBBA;
+  background-color:  var(--roti);
 }
 
 /*--------------------------------------------------------------
@@ -1356,7 +1361,7 @@ section .container {
 .contact .info-box h3 {
   font-family: 'handjet', sans-serif;
   font-size: 20px;
-  color: #aaaaaa;
+  color: var(--lightGrey);
   font-weight: 700;
   margin: 10px 0 8px 15px;
   letter-spacing: 3px;
@@ -1510,7 +1515,7 @@ section .container {
 }
 
 .credits>span {
-  color: #65EBBA;
+  color: var(--roti);
 }
 
 @media (max-width: 992px) {
