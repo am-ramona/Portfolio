@@ -1295,8 +1295,9 @@ section .container {
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
   font-weight: 400;
+  letter-spacing: 2px;
   margin-bottom: 20px;
-  font-family: "Lato", sans-serif;
+  /* font-family: "Lato", sans-serif; */
 }
 
 .portfolio-details .portfolio-info ul {
