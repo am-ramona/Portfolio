@@ -26,6 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -45,15 +46,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/esher.jpg" alt="">
+                  <img id="image_1" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/esher.jpg" alt="">
+                  <img id="image_2" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/esher.jpg" alt="">
+                  <img id="image_3" alt="">
                 </div>
 
               </div>
@@ -65,14 +66,14 @@
           <div class="col-lg-4 portfolio-info">
             <h3>Project information</h3>
             <ul>
-              <li><strong>Category</strong>: Front-end Development</li>
-              <li><strong>Client</strong>
-                <!-- : Company -->
+              <li id='category'><strong>Category</strong> : <span></span> </li>
+              <li id='client'><strong>Client</strong> :
+                <span></span>
               </li>
-              <li><strong>Project date</strong>
+              <li id='date'><strong>Project date</strong> : <span></span>
                 <!-- : 01 March, 2020 -->
               </li>
-              <li><strong>Project URL</strong>
+              <li id='url'><strong>Project URL</strong> : <a href=''></a>
                 <!-- : <a href="#">www.example.com</a> -->
               </li>
             </ul>
@@ -90,11 +91,11 @@
   </main><!-- End #main -->
 
   <!-- <div class="credits"> -->
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  <!-- All the links in the footer should remain intact. -->
+  <!-- You can delete the links only if you purchased the pro version. -->
+  <!-- Licensing information: https://bootstrapmade.com/license/ -->
+  <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+  <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
   </div> -->
 
   <!-- Vendor JS Files -->
@@ -109,13 +110,45 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    var website = document.querySelector("a").getAttribute("href");
-    //  var name = mydiv.getAttribute("data-myval")
-    // $('.portfolio-links').delegate("a", "click", function(e) {
-   var str = website.split('?')[1];
-    // });
-    console.log("str", str)
-    </script>
+    var name = new URL(location.href).searchParams.get('name');
+    console.log('name', new URL(location.href))
+    document.getElementById('image_1').src = `assets/img/portfolio/` + name + '.jpg';
+    document.getElementById('image_2').src = `assets/img/portfolio/` + name + '1.jpg';
+    document.getElementById('image_3').src = `assets/img/portfolio/` + name + '2.jpg';
+
+    const categories = new Map();
+    categories.set('esher', ['Backend & Frontend Development', 'Advanced Blockchain', '', '']);
+    categories.set('Eth-Polygon', ['Backend & Frontend Development', 'Personal Work', '',
+      'https://transactions-listing-blockchain.vercel.app/'
+    ]);
+
+    function getCategoryAndClient(name) {
+      let category, client, date, url;
+      category = categories.get(name)[0];
+      client = categories.get(name)[1];
+      date = categories.get(name)[2];
+      url = categories.get(name)[3];
+      if (category === undefined) {
+        category = 'Frontend Development';
+      }
+      if (client === undefined) {
+        client = 'Personal Work'
+      }
+      if (date === undefined) {
+        date = ''
+      }
+      if (url === undefined) {
+        url = ''
+      }
+      return [category, client, date, url];
+    }
+
+    let [category, client, date, url] = getCategoryAndClient(name);
+    document.querySelectorAll('#category span')[0].textContent = category;
+    document.querySelectorAll('#client span')[0].textContent = client;
+    document.querySelectorAll('#date span')[0].textContent = date;
+    document.querySelectorAll('#url a')[0].textContent = url;
+  </script>
 
 </body>
 
