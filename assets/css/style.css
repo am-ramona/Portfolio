@@ -318,6 +318,15 @@ iframe {
   /* -webkit-background-clip: text; */
 }
 
+#header h2 span:hover {
+  background: linear-gradient(#eee, #333);
+  background: -webkit-linear-gradient(#eee, #333);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 #header img {
   padding: 0;
   margin: 0;
