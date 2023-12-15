@@ -323,7 +323,7 @@ iframe {
   background: -webkit-linear-gradient(#eee, #333);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  /* color: transparent; */
   -webkit-text-fill-color: transparent;
 }
 
