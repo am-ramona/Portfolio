@@ -1,16 +1,16 @@
 function addHTML() {
     var el, i, domEl, fileName, xmlHttp;
     
-    /*Iterate all DOM*/
+    /*-- Iterate all DOM --*/
     el = document.getElementsByTagName("*");
     for (i = 0; i < el.length; i++) {
        domEl = el[i];
        
-       /*find the element having w3-include-html attribute*/
+       /*-- find the element having w3-include-html attribute --*/
        fileName = domEl.getAttribute("w3-include-html");
        if (fileName) {
           
-          /*http request with attribute value as file name*/
+          /*-- http request with attribute value as file name --*/
           xmlHttp = new XMLHttpRequest();
           xmlHttp.UseCors(builder => builder
             .AllowAnyOrigin()
@@ -26,7 +26,7 @@ function addHTML() {
                    domEl.innerHTML = "Page not found.";
                 }
                 
-                /* Remove the attribute and invoke the function again*/
+                /*-- Remove the attribute and invoke the function again --*/
                 domEl.removeAttribute("w3-include-html");
                 addHTML();
              }
@@ -34,7 +34,6 @@ function addHTML() {
           xmlHttp.open("GET", fileName, true);
           xmlHttp.send();
           
-          /*function ends*/
           return;
        }
     }
