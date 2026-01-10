@@ -136,6 +136,38 @@
         scrollto(window.location.hash)
       }
     }
+
+    // Get the button element
+let backToTopIcon = document.querySelector('#back-to-top i');
+
+// Define the scroll threshold (e.g., 400 pixels)
+const scrollThreshold = 400; // Change this value to adjust when the button appears
+
+// When the user scrolls down, show or hide the button
+window.onscroll = function() {scrollFunction()};
+
+// When the user clicks on the button, scroll to the top
+function scrollToTop() {
+  // Use the modern, smooth scrolling API
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+function scrollFunction() {
+  if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+    backToTopIcon.style.display = "flex";
+  } else {
+    backToTopIcon.style.display = "none";
+  }
+}
+
+// When the user clicks, scroll to the top
+backToTopIcon.onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
   });
 
   /**
