@@ -200,6 +200,10 @@
   --grey: #797986;
   --lightGrey: #BBBCBE;
 
+  --typewriter-steps: 40; /* Number of characters/steps */
+  --typewriter-duration: 4s; /* Total animation duration */
+  --cursor-color: orange;
+
   /* --bs-body-font-family
   --bs-body-font-size
   --bs-body-font-weight
@@ -284,12 +288,9 @@ iframe {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 700;
-  font-family: "Zefani", sans-serif;
 }
 
-#header h1 a,
-#header h1 a:hover {
+#header h1 a {
   line-height: 1;
   display: inline-block;
   font-weight: 100;
@@ -303,6 +304,29 @@ iframe {
   /* font-family: inherit; */
   letter-spacing: 1.3px;
   margin-top: 20px;
+
+    /* Prevent text from wrapping to a new line */
+  white-space: nowrap; 
+  /* Hide the text initially */
+  overflow: hidden; 
+  /* Add a right border to act as the cursor */
+  border-right: .15em solid var(--cursor-color); 
+  /* Apply both the typing and blinking animations */
+  animation: 
+    typing var(--typewriter-duration) steps(var(--typewriter-steps), end) forwards,
+    blink .75s step-end infinite; 
+}
+
+/* Keyframes for the typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Keyframes for the blinking cursor animation */
+@keyframes blink {
+  from, to { border-right-color: transparent }
+  50% { border-right-color: var(--cursor-color) }
 }
 
 #header h2 span {
@@ -1572,3 +1596,54 @@ section .container {
   background-color: var(--roti);
   border-radius: 10px;
 }
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+   body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+
+            display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+.logo {
+      width: 100px;
+      height: 100px;
+      background-image: url('https://cryptologos.cc/logos/ethereum-eth-logo.png'); /* Replace with your Ethereum logo URL */
+      background-size: cover;
+      animation: rotate 3s linear infinite;
+
+      width: 100px;
+      height: 100px;
+      background-image: url('https://cryptologos.cc/logos/ethereum-eth-logo.png'); /* Replace with your Ethereum logo URL */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: rotate 3s linear infinite;
+      border: 1px solid #ccc; /* Optional: Add a border to see the div */
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }

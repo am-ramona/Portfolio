@@ -250,4 +250,7 @@
    */
   new PureCounter();
 
+
+/** Web3 Animation **/
+
 })()
