@@ -101,6 +101,8 @@
     }
   }, true)
 
+
+  const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
   /**
    * Activate/show sections on load with hash links
    */
@@ -161,7 +163,9 @@ backToTopIcon.onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-  });
+spinnerWrapperEl.style.opacity = '0';
+spinnerWrapperEl.style.display = 'none';
+});
 
   /**
    * Skills animation
