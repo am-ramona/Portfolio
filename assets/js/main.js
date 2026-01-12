@@ -165,6 +165,20 @@ backToTopIcon.onclick = function() {
 
 spinnerWrapperEl.style.opacity = '0';
 spinnerWrapperEl.style.display = 'none';
+
+var i = 0;
+const typewriterSelector = document.querySelector('#header h2 > span');
+const typewriterPhrase = 'Passionate Versatile Technical Professional, a Front-end Connoisseur, a Web3 Aficionado.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < typewriterPhrase.length) {
+    typewriterSelector.innerHTML += typewriterPhrase.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+// typeWriter();
 });
 
   /**
