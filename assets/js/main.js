@@ -1,4 +1,4 @@
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -41,7 +41,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -50,7 +50,7 @@
   /**
    * Scroll with offset on links with a class name .scrollto
    */
-  on('click', '#navbar .nav-link', function(e) {
+  on('click', '#navbar .nav-link', function (e) {
     let section = select(this.hash)
     if (section) {
       e.preventDefault()
@@ -83,7 +83,7 @@
 
       if (!header.classList.contains('header-top')) {
         header.classList.add('header-top')
-        setTimeout(function() {
+        setTimeout(function () {
           sections.forEach((item) => {
             item.classList.remove('section-show')
           })
@@ -124,7 +124,7 @@
           }
         })
 
-        setTimeout(function() {
+        setTimeout(function () {
           initial_nav.classList.add('section-show')
         }, 350);
 
@@ -133,53 +133,53 @@
     }
 
     // Get the button element
-let backToTopIcon = document.querySelector('#back-to-top');
+    let backToTopIcon = document.querySelector('#back-to-top');
 
-// Define the scroll threshold (e.g., 400 pixels)
-const scrollThreshold = 400; // Change this value to adjust when the button appears
+    // Define the scroll threshold (e.g., 400 pixels)
+    const scrollThreshold = 400; // Change this value to adjust when the button appears
 
-// When the user scrolls down, show or hide the button
-window.onscroll = function() {scrollFunction()};
+    // When the user scrolls down, show or hide the button
+    window.onscroll = function () { scrollFunction() };
 
-// When the user clicks on the button, scroll to the top
-function scrollToTop() {
-  // Use the modern, smooth scrolling API
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+    // When the user clicks on the button, scroll to the top
+    function scrollToTop() {
+      // Use the modern, smooth scrolling API
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    function scrollFunction() {
+      if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+        backToTopIcon.style.display = "flex";
+      } else {
+        backToTopIcon.style.display = "none";
+      }
+    }
+
+    // When the user clicks, scroll to the top
+    backToTopIcon.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    spinnerWrapperEl.style.opacity = '0';
+    spinnerWrapperEl.style.display = 'none';
+
+    var i = 0;
+    const typewriterSelector = document.querySelector('#header h2 > span');
+    const typewriterPhrase = 'Passionate Versatile Technical Professional, a Front-end Connoisseur, a Web3 Aficionado.';
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < typewriterPhrase.length) {
+        typewriterSelector.innerHTML += typewriterPhrase.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    // typeWriter();
   });
-}
-
-function scrollFunction() {
-  if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-    backToTopIcon.style.display = "flex";
-  } else {
-    backToTopIcon.style.display = "none";
-  }
-}
-
-// When the user clicks, scroll to the top
-backToTopIcon.onclick = function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-spinnerWrapperEl.style.opacity = '0';
-spinnerWrapperEl.style.display = 'none';
-
-var i = 0;
-const typewriterSelector = document.querySelector('#header h2 > span');
-const typewriterPhrase = 'Passionate Versatile Technical Professional, a Front-end Connoisseur, a Web3 Aficionado.';
-var speed = 50;
-
-function typeWriter() {
-  if (i < typewriterPhrase.length) {
-    typewriterSelector.innerHTML += typewriterPhrase.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-// typeWriter();
-});
 
   /**
    * Skills animation
@@ -189,7 +189,7 @@ function typeWriter() {
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -240,11 +240,11 @@ function typeWriter() {
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
-      
 
-      on('click', '#portfolio-flters li', function(e) {
+
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -296,6 +296,6 @@ function typeWriter() {
   new PureCounter();
 
 
-/** Web3 Animation **/
+  /** Web3 Animation **/
 
 })()
