@@ -1021,7 +1021,6 @@ section .container {
   right: 4%;
   bottom: 44px;
   z-index: 99999;
-  /* background: var(--roti); */
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -1037,7 +1036,6 @@ section .container {
 }
 
  #back-to-top i:hover {
-    /* background: #eee; */
     color: #eee;
     opacity: 1;
     }
