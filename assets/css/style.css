@@ -199,6 +199,7 @@
   --twilightBlue              : #F0FFFF;
   --grey                      : #797986;
   --lightGrey                 : #BBBCBE;
+  --accent-color              : #18d26e;
 
   --typewriter-steps      : 92;
   /* Number of characters/steps */
@@ -325,16 +326,17 @@ iframe {
 
 #header h2 {
   font-weight    : 300;
-  font-size      : 1em;
+  font-size      : clamp(0.5em, 3vw, 1em);
   /* font-family : inherit; */
   letter-spacing : 1.3px;
   margin-top     : 20px;
   white-space    : nowrap;
   overflow       : hidden;
+  align-self: flex-start;
   /* border-right: .15em solid var(--cursor-color);  */
-  animation      :
+  /* animation      :
     typing var(--typewriter-duration) steps(var(--typewriter-steps), end) forwards,
-    blink .75s step-end infinite;
+    blink .75s step-end infinite; */
 }
 
 /* Keyframes for the typing animation */
@@ -373,6 +375,8 @@ iframe {
 } */
 
 #header h2 span {
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--accent-color);
   color: var(--bs-link-hover-color-rgb);
 }
 
