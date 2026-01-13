@@ -1504,7 +1504,7 @@ section .container {
   transition: 0.3s;
 }
 
-.contact .info-box .social-links a:hover {
+.contact .info-box a:hover {
   color: var(--bs-link-hover-color-rgb);
 }
 
