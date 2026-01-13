@@ -1204,8 +1204,10 @@ section .container {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  /* margin: 0 5px 30px 5px; */
 }
 
 .portfolio #portfolio-flters {
@@ -1248,6 +1250,7 @@ section .container {
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
   max-height: 164px;
+  margin: 0 10px;
 }
 
 .portfolio .portfolio-wrap::before {
