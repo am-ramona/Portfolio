@@ -133,7 +133,7 @@
     }
 
     // Get the button element
-let backToTopIcon = document.querySelector('#back-to-top i');
+let backToTopIcon = document.querySelector('#back-to-top');
 
 // Define the scroll threshold (e.g., 400 pixels)
 const scrollThreshold = 400; // Change this value to adjust when the button appears
@@ -232,6 +232,7 @@ function typeWriter() {
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
+    // let portfolioContainer = document.querySelectorAll('.portfolio-container')[1]; 
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item',
@@ -239,6 +240,7 @@ function typeWriter() {
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
+      
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();

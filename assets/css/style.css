@@ -1015,10 +1015,10 @@ section .container {
 }
 
 /*--- back To Top ---*/
-#back-to-top i {
+#back-to-top {
   position: fixed;
   display: none;
-  right: 15px;
+  right: 4%;
   bottom: 44px;
   z-index: 99999;
   /* background: var(--roti); */
@@ -1029,6 +1029,9 @@ section .container {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+#back-to-top i{
   opacity: 0.7;
   transition: opacity 0.3s;
 }
