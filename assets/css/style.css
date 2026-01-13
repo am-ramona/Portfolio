@@ -1480,7 +1480,8 @@ section .container {
   letter-spacing: 3px;
 }
 
-.contact .info-box p {
+.contact .info-box p,
+.contact .info-box a {
   font-family: 'Handjet';
   font-size: 17px;
   padding: 0;
