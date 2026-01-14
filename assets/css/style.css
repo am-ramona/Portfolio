@@ -362,17 +362,6 @@ iframe {
   }
 }
 
-/* @media (max-width: 600px) {
-  #header h2 {
-    white-space: normal; 
-    border-right: none; 
-  }
-  :root {
-    --typewriter-duration: 6s;
-    --typewriter-steps: 120; 
-  }
-} */
-
 #header h2 span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
@@ -1644,7 +1633,6 @@ section .container {
   text-align: right;
   font-size: 13px;
   color: var(--white);
-  /* z-index: 999999; */
 }
 
 .credits>span {
@@ -1706,14 +1694,8 @@ body {
   width: 100px;
   height: 100px;
   background-image: url('https://cryptologos.cc/logos/ethereum-eth-logo.png');
-  /* Replace with your Ethereum logo URL */
   background-size: cover;
   animation: rotate 3s linear infinite;
-
-  width: 100px;
-  height: 100px;
-  background-image: url('https://cryptologos.cc/logos/ethereum-eth-logo.png');
-  /* Replace with your Ethereum logo URL */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
