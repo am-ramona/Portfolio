@@ -101,8 +101,6 @@
     }
   }, true)
 
-
-  const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
   /**
    * Activate/show sections on load with hash links
    */
@@ -169,13 +167,14 @@
     window.addEventListener('scroll', updateBackToTopVisibility);
     window.addEventListener('resize', updateBackToTopVisibility);
     document.addEventListener('DOMContentLoaded', updateBackToTopVisibility);
-  if (backToTopIcon) {
-    backToTopIcon.addEventListener('click', () => {
-      console.log('Back-to-top clicked');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+    if (backToTopIcon) {
+      backToTopIcon.addEventListener('click', () => {
+        console.log('Back-to-top clicked');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
+    const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
     spinnerWrapperEl.style.opacity = '0';
     spinnerWrapperEl.style.display = 'none';
 
