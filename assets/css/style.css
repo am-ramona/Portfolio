@@ -193,15 +193,18 @@
   --bs-link-color-rgb: #F0FFFF;
   /* --bs-link-hover-color-rgb: #BCFE49; */
   --bs-link-hover-color-rgb: #B6B544;
+  --bs-link-hover-color-rgb: #09E85E;
   --bs-progress-bar-color: #B6B544;
   --bs-progress-bar-bg: #B6B544;
   --roti: #B6B544;
+  --roti: #09E85E;
   --twilightBlue: #F0FFFF;
   --grey: #797986;
   --lightGrey: #BBBCBE;
   --yellowish-color: #f2e9d0;
   --dark-yellowish-color: #d4ccb6;
   --accent-color: #18d26e;
+   --accent-color: #09E85E;
   --typewriter-steps: 92;
   --typewriter-duration: 5s;
   /* --typewriter-duration: clamp(2s, 5vw, 6s);
@@ -391,7 +394,6 @@ iframe {
 #header h2 span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
-  /* color: var(--bs-link-hover-color-rgb); */
   color: var(--white);
 }
 
@@ -428,7 +430,7 @@ iframe {
 }
 
 #header .social-links a:hover {
-  background: var(--bs-link-hover-color-rgb);
+  background: var(--roti);
 }
 
 /* Header Top */
@@ -545,7 +547,7 @@ iframe {
   /* font-family   : "Poppins", sans-serif; */
   font-size: 16px;
   font-weight: 400;
-  color: var(--dark-yellowish-color);
+  color: var(--white);
   white-space: nowrap;
   transition: 0.3s;
   line-height: 1px;
@@ -567,7 +569,7 @@ iframe {
   height: 1px;
   bottom: -15px;
   left: 0;
-  background-color: var(--bs-link-hover-color-rgb);
+  background-color: var(--roti);
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -584,7 +586,7 @@ iframe {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: var(--white);
+  color: var(--roti);
 }
 
 /**
