@@ -132,44 +132,49 @@
       }
     }
 
-      /**
-   * Init typed.js
-   */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 65,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
-
-    let backToTopIcon = document.querySelector('#back-to-top');
-
-    const scrollThreshold = 400; 
-    const breakpointWidth = 768;
-    window.onscroll = function () { scrollFunction() };
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    /**
+     * Init typed.js
+     */
+    const selectTyped = document.querySelector('.typed');
+    if (selectTyped) {
+      let typed_strings = selectTyped.getAttribute('data-typed-items');
+      typed_strings = typed_strings.split(',');
+      new Typed('.typed', {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 65,
+        backSpeed: 50,
+        backDelay: 2000
       });
     }
 
-    function scrollFunction() {
-      if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-        backToTopIcon.style.display = "flex";
-      } else {
-        backToTopIcon.style.display = "none";
-      }
+    const backToTopIcon = document.querySelector('#back-to-top');
+    const scrollThreshold = 400;
+    const breakpointWidth = 768;
+
+    function isWideScreen() {
+      return window.innerWidth >= breakpointWidth;
     }
-    backToTopIcon.onclick = function () {
+
+    function updateBackToTopVisibility() {
+      if (!backToTopIcon) return;
+      if (!isWideScreen()) {
+        backToTopIcon.style.display = "none";
+        return;
+      }
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      backToTopIcon.style.display = (scrollTop > scrollThreshold) ? "flex" : "none";
+    }
+
+    window.addEventListener('scroll', updateBackToTopVisibility);
+    window.addEventListener('resize', updateBackToTopVisibility);
+    document.addEventListener('DOMContentLoaded', updateBackToTopVisibility);
+  if (backToTopIcon) {
+    backToTopIcon.addEventListener('click', () => {
+      console.log('Back-to-top clicked');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    });
+  }
 
     spinnerWrapperEl.style.opacity = '0';
     spinnerWrapperEl.style.display = 'none';
