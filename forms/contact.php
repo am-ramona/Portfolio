@@ -15,7 +15,6 @@
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
 
-  // Uncomment below code for SMTP to send emails. SMTP credentials should be correct.
   /*
   $contact->smtp = array(
     'host' => 'example.com',
