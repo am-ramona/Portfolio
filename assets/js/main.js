@@ -111,6 +111,8 @@ const pauseIcon = document.getElementById('pauseIcon');
 const volumeControl = document.getElementById('volumeControl');
 const volumeSlider = document.getElementById('volumeSlider');
 
+audio.volume = volumeSlider.value; 
+
 let isPlaying = false;
 function togglePlayPause() {
     if (isPlaying) {
@@ -120,7 +122,16 @@ function togglePlayPause() {
     }
 }
 
-playPauseButton.addEventListener('click', togglePlayPause);
+// playPauseButton.addEventListener('click', togglePlayPause);
+playPauseButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play().catch(error => { 
+            console.log("Play failed:", error);
+        });
+    } else {
+        audio.pause();
+    }
+});
 
 audio.addEventListener('play', () => {
     isPlaying = true;
@@ -146,6 +157,10 @@ audio.addEventListener('ended', () => {
 
 volumeSlider.addEventListener('input', (e) => {
     audio.volume = e.target.value;
+});
+
+audio.addEventListener('volumechange', () => {
+    volumeSlider.value = audio.volume;
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
