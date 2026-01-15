@@ -101,6 +101,59 @@
     }
   }, true)
 
+    /**
+   * Play/Pause audio music
+   */
+const audio = document.getElementById('myAudio');
+const playPauseButton = document.getElementById('playPauseButton');
+const playIcon = document.getElementById('playIcon');
+const pauseIcon = document.getElementById('pauseIcon');
+const volumeControl = document.getElementById('volumeControl');
+const volumeSlider = document.getElementById('volumeSlider');
+
+let isPlaying = false;
+function togglePlayPause() {
+    if (isPlaying) {
+        audio.pause();
+    } else {
+        audio.play();
+    }
+}
+
+playPauseButton.addEventListener('click', togglePlayPause);
+
+audio.addEventListener('play', () => {
+    isPlaying = true;
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'inline';
+    volumeControl.style.display = 'flex';
+});
+
+audio.addEventListener('pause', () => {
+    isPlaying = false;
+    playIcon.style.display = 'inline';
+    pauseIcon.style.display = 'none';
+    volumeControl.style.display = 'none'; 
+});
+
+audio.addEventListener('ended', () => {
+    isPlaying = false;
+    playIcon.style.display = 'inline';
+    pauseIcon.style.display = 'none';
+    volumeControl.style.display = 'none';
+    audio.currentTime = 0; 
+});
+
+volumeSlider.addEventListener('input', (e) => {
+    audio.volume = e.target.value;
+});
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    audio.play().catch(error => {
+        console.log("Autoplay was prevented:", error);
+    });
+});
+
   /**
    * Activate/show sections on load with hash links
    */

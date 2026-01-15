@@ -512,6 +512,129 @@ iframe {
 }
 
 /*--------------------------------------------------------------
+# Audio Player Controls
+--------------------------------------------------------------*/
+.audio-player-container {
+    position: absolute;
+    top: 24px;
+    right: 3%;
+    z-index: 999;
+}
+
+@media (max-width: 991px) {
+.audio-player-container {
+    bottom: 3%;
+    width: fit-content;
+    top: auto;
+ }
+}
+
+    .control-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #09E85E; 
+    font-size: 1.4rem;
+    outline: none; 
+}
+
+.volume-icon {
+    color: #09E85E;
+}
+
+#playPauseButton {
+    width: 100%;
+    text-align: right;
+}
+
+/* Style the volume slider as needed */
+.volume-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+#volumeSlider {
+  width: 100%; 
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background: transparent; 
+  margin: 5px;
+}
+
+/* Styling the Track */
+/* Webkit (Chrome, Safari, newer Edge, Opera) */
+#volumeSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: var(--white);
+  border-radius: 5px; 
+  border: none;
+}
+
+/* Firefox */
+#volumeSlider::-moz-range-track {
+  width: 100%;
+  height: 10px; 
+  cursor: pointer;
+  background: var(--white);
+  border-radius: 5px;
+  border: none;
+}
+
+/* IE/Edge (older) */
+#volumeSlider::-ms-track {
+  width: 100%;
+  height: 10px; 
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Styling the Thumb (the draggable circle/square) */
+/* Webkit */
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px; 
+  width: 20px; 
+  border-radius: 50%; 
+  background: var(--roti);
+  cursor: pointer;
+  margin-top: -6px; 
+  box-shadow: 1px 1px 1px #0000000px 0px 1px #0d0d0d; 
+}
+
+/* Firefox */
+#volumeSlider::-moz-range-thumb {
+  height: 20px; 
+  width: 20px; 
+  border-radius: 50%;
+  background: var(--roti);
+  cursor: pointer;
+}
+
+/* IE/Edge (older) */
+#volumeSlider::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--roti);
+  cursor: pointer;
+  margin-top: 0;
+}
+
+#volumeSlider:focus {
+  outline: none; 
+}
+
+#volumeSlider:focus::-webkit-slider-runnable-track {
+  background: var(--yellowish-color);
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
