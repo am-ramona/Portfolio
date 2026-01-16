@@ -166,12 +166,16 @@ audio.addEventListener('volumechange', () => {
 
 function applySmallScreenRule() {
   const isNarrow = window.matchMedia('(max-width: 767px)').matches;
+
+  const volumeControl  = document.getElementById("volumeControl");
+
   if (volumeControl) {
     volumeControl.style.display = isNarrow ? 'none' : 'flex';
+  } else {
+    console.warn('volumeControl element not found';
   }
 }
-
-window.addEventListener('DOMContentLoaded', applySmallScreenRule);
+window.addEventListener('load', applySmallScreenRule);
 window.addEventListener('resize', applySmallScreenRule);
 
   /**
@@ -250,6 +254,13 @@ window.addEventListener('resize', applySmallScreenRule);
     const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
     spinnerWrapperEl.style.opacity = '0';
     spinnerWrapperEl.style.display = 'none';
+
+    window.addEventListener('load', () => {
+  const icon = document.getElementById('loadingIcon');
+  if (icon) {
+    icon.classList.remove('spin-on-load');
+  }
+});
 
     var i = 0;
     const typewriterSelector = document.querySelector('#header h2 > span');
