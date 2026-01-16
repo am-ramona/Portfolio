@@ -111,63 +111,68 @@ const pauseIcon = document.getElementById('pauseIcon');
 const volumeControl = document.getElementById('volumeControl');
 const volumeSlider = document.getElementById('volumeSlider');
 
-audio.volume = volumeSlider.value; 
+if (volumeSlider && typeof volumeSlider.value !== 'undefined') {
+  audio.volume = volumeSlider.value;
+}
 
 let isPlaying = false;
 function togglePlayPause() {
-    if (isPlaying) {
-        audio.pause();
-    } else {
-        audio.play();
-    }
+  if (isPlaying) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
 }
 
-// playPauseButton.addEventListener('click', togglePlayPause);
 playPauseButton.addEventListener('click', () => {
-    if (audio.paused) {
-        audio.play().catch(error => { 
-            console.log("Play failed:", error);
-        });
-    } else {
-        audio.pause();
-    }
+  if (audio.paused) {
+    audio.play().catch(error => { 
+      console.log("Play failed:", error);
+    });
+  } else {
+    audio.pause();
+  }
 });
 
 audio.addEventListener('play', () => {
-    isPlaying = true;
-    playIcon.style.display = 'none';
-    pauseIcon.style.display = 'inline';
-    volumeControl.style.display = 'flex';
+  isPlaying = true;
+  if (playIcon) playIcon.style.display = 'none';
+  if (pauseIcon) pauseIcon.style.display = 'inline';
+  if (volumeControl) volumeControl.style.display = 'flex';
 });
 
 audio.addEventListener('pause', () => {
-    isPlaying = false;
-    playIcon.style.display = 'inline';
-    pauseIcon.style.display = 'none';
-    volumeControl.style.display = 'none'; 
+  isPlaying = false;
+  if (playIcon) playIcon.style.display = 'inline';
+  if (pauseIcon) pauseIcon.style.display = 'none';
+  if (volumeControl) volumeControl.style.display = 'none';
 });
 
 audio.addEventListener('ended', () => {
-    isPlaying = false;
-    playIcon.style.display = 'inline';
-    pauseIcon.style.display = 'none';
-    volumeControl.style.display = 'none';
-    audio.currentTime = 0; 
+  isPlaying = false;
+  if (playIcon) playIcon.style.display = 'inline';
+  if (pauseIcon) pauseIcon.style.display = 'none';
+  if (volumeControl) volumeControl.style.display = 'none';
+  audio.currentTime = 0; 
 });
 
 volumeSlider.addEventListener('input', (e) => {
-    audio.volume = e.target.value;
+  audio.volume = e.target.value;
 });
 
 audio.addEventListener('volumechange', () => {
-    volumeSlider.value = audio.volume;
+  if (volumeSlider) volumeSlider.value = audio.volume;
 });
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    audio.play().catch(error => {
-        console.log("Autoplay was prevented:", error);
-    });
-});
+function applySmallScreenRule() {
+  const isNarrow = window.matchMedia('(max-width: 767px)').matches;
+  if (volumeControl) {
+    volumeControl.style.display = isNarrow ? 'none' : 'flex';
+  }
+}
+
+window.addEventListener('DOMContentLoaded', applySmallScreenRule);
+window.addEventListener('resize', applySmallScreenRule);
 
   /**
    * Activate/show sections on load with hash links

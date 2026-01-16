@@ -480,6 +480,10 @@ iframe {
   #header.header-top h1 {
     font-size: 26px;
   }
+
+  #header .social-links {
+  align-self: flex-start;
+  }
 }
 
 @media (max-width: 992px) {
