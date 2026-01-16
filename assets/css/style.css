@@ -306,7 +306,7 @@ iframe {
 }
 
 .spinner-wrapper {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--black);
   position: fixed;
   top: 0;
   left: 0;

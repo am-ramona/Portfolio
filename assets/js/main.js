@@ -172,7 +172,7 @@ function applySmallScreenRule() {
   if (volumeControl) {
     volumeControl.style.display = isNarrow ? 'none' : 'flex';
   } else {
-    console.warn('volumeControl element not found';
+    console.warn('volumeControl element not found');
   }
 }
 window.addEventListener('load', applySmallScreenRule);
