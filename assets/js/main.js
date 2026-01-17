@@ -115,7 +115,9 @@ if (volumeSlider && typeof volumeSlider.value !== 'undefined') {
   audio.volume = volumeSlider.value;
 }
 
-let isPlaying = false;
+// let isPlaying = false;
+let isPlaying = !audio.paused && !audio.ended && audio.currentTime > 0;
+
 function togglePlayPause() {
   if (isPlaying) {
     audio.pause();
@@ -134,11 +136,13 @@ playPauseButton.addEventListener('click', () => {
   }
 });
 
+ const isNarrow = window.matchMedia('(max-width: 767px)').matches;
+
 audio.addEventListener('play', () => {
   isPlaying = true;
   if (playIcon) playIcon.style.display = 'none';
   if (pauseIcon) pauseIcon.style.display = 'inline';
-  if (volumeControl) volumeControl.style.display = 'flex';
+  if (volumeControl && !isNarrow) volumeControl.style.display = 'flex';
 });
 
 audio.addEventListener('pause', () => {
@@ -170,7 +174,7 @@ function applySmallScreenRule() {
   const volumeControl  = document.getElementById("volumeControl");
 
   if (volumeControl) {
-    volumeControl.style.display = isNarrow ? 'none' : 'flex';
+    volumeControl.style.display = (!isNarrow && isPlaying) ? 'flex' : 'none';
   } else {
     console.warn('volumeControl element not found');
   }
