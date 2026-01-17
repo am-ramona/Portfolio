@@ -101,86 +101,86 @@
     }
   }, true)
 
-    /**
-   * Play/Pause audio music
-   */
-const audio = document.getElementById('myAudio');
-const playPauseButton = document.getElementById('playPauseButton');
-const playIcon = document.getElementById('playIcon');
-const pauseIcon = document.getElementById('pauseIcon');
-const volumeControl = document.getElementById('volumeControl');
-const volumeSlider = document.getElementById('volumeSlider');
+  /**
+ * Play/Pause audio music
+ */
+  const audio = document.getElementById('myAudio');
+  const playPauseButton = document.getElementById('playPauseButton');
+  const playIcon = document.getElementById('playIcon');
+  const pauseIcon = document.getElementById('pauseIcon');
+  const volumeControl = document.getElementById('volumeControl');
+  const volumeSlider = document.getElementById('volumeSlider');
 
-if (volumeSlider && typeof volumeSlider.value !== 'undefined') {
-  audio.volume = volumeSlider.value;
-}
-
-// let isPlaying = false;
-let isPlaying = !audio.paused && !audio.ended && audio.currentTime > 0;
-
-function togglePlayPause() {
-  if (isPlaying) {
-    audio.pause();
-  } else {
-    audio.play();
+  if (volumeSlider && typeof volumeSlider.value !== 'undefined') {
+    audio.volume = volumeSlider.value;
   }
-}
 
-playPauseButton.addEventListener('click', () => {
-  if (audio.paused) {
-    audio.play().catch(error => { 
-      console.log("Play failed:", error);
-    });
-  } else {
-    audio.pause();
+  // let isPlaying = false;
+  let isPlaying = !audio.paused && !audio.ended && audio.currentTime > 0;
+
+  function togglePlayPause() {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
   }
-});
 
- const isNarrow = window.matchMedia('(max-width: 767px)').matches;
+  playPauseButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(error => {
+        console.log("Play failed:", error);
+      });
+    } else {
+      audio.pause();
+    }
+  });
 
-audio.addEventListener('play', () => {
-  isPlaying = true;
-  if (playIcon) playIcon.style.display = 'none';
-  if (pauseIcon) pauseIcon.style.display = 'inline';
-  if (volumeControl && !isNarrow) volumeControl.style.display = 'flex';
-});
-
-audio.addEventListener('pause', () => {
-  isPlaying = false;
-  if (playIcon) playIcon.style.display = 'inline';
-  if (pauseIcon) pauseIcon.style.display = 'none';
-  if (volumeControl) volumeControl.style.display = 'none';
-});
-
-audio.addEventListener('ended', () => {
-  isPlaying = false;
-  if (playIcon) playIcon.style.display = 'inline';
-  if (pauseIcon) pauseIcon.style.display = 'none';
-  if (volumeControl) volumeControl.style.display = 'none';
-  audio.currentTime = 0; 
-});
-
-volumeSlider.addEventListener('input', (e) => {
-  audio.volume = e.target.value;
-});
-
-audio.addEventListener('volumechange', () => {
-  if (volumeSlider) volumeSlider.value = audio.volume;
-});
-
-function applySmallScreenRule() {
   const isNarrow = window.matchMedia('(max-width: 767px)').matches;
 
-  const volumeControl  = document.getElementById("volumeControl");
+  audio.addEventListener('play', () => {
+    isPlaying = true;
+    if (playIcon) playIcon.style.display = 'none';
+    if (pauseIcon) pauseIcon.style.display = 'inline';
+    if (volumeControl && !isNarrow) volumeControl.style.display = 'flex';
+  });
 
-  if (volumeControl) {
-    volumeControl.style.display = (!isNarrow && isPlaying) ? 'flex' : 'none';
-  } else {
-    console.warn('volumeControl element not found');
+  audio.addEventListener('pause', () => {
+    isPlaying = false;
+    if (playIcon) playIcon.style.display = 'inline';
+    if (pauseIcon) pauseIcon.style.display = 'none';
+    if (volumeControl) volumeControl.style.display = 'none';
+  });
+
+  audio.addEventListener('ended', () => {
+    isPlaying = false;
+    if (playIcon) playIcon.style.display = 'inline';
+    if (pauseIcon) pauseIcon.style.display = 'none';
+    if (volumeControl) volumeControl.style.display = 'none';
+    audio.currentTime = 0;
+  });
+
+  volumeSlider.addEventListener('input', (e) => {
+    audio.volume = e.target.value;
+  });
+
+  audio.addEventListener('volumechange', () => {
+    if (volumeSlider) volumeSlider.value = audio.volume;
+  });
+
+  function applySmallScreenRule() {
+    const isNarrow = window.matchMedia('(max-width: 767px)').matches;
+
+    const volumeControl = document.getElementById("volumeControl");
+
+    if (volumeControl) {
+      volumeControl.style.display = (!isNarrow && isPlaying) ? 'flex' : 'none';
+    } else {
+      console.warn('volumeControl element not found');
+    }
   }
-}
-window.addEventListener('load', applySmallScreenRule);
-window.addEventListener('resize', applySmallScreenRule);
+  window.addEventListener('load', applySmallScreenRule);
+  window.addEventListener('resize', applySmallScreenRule);
 
   /**
    * Activate/show sections on load with hash links
@@ -255,21 +255,37 @@ window.addEventListener('resize', applySmallScreenRule);
       });
     }
 
-    const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
-    spinnerWrapperEl.style.opacity = '0';
-    spinnerWrapperEl.style.display = 'none';
+    if (document.fonts && document.fonts.load) {
+  document.fonts.load('1em "Bootstrap Icons"').then(() => {
+    spinnerWrapperEl.style.display = '';
+    spinnerWrapperEl.style.opacity = '1';
+  }).catch(() => {
+    spinnerWrapperEl.style.display = '';
+    spinnerWrapperEl.style.opacity = '1';
+  });
+} else {
+  window.addEventListener('DOMContentLoaded', () => {
+    spinnerWrapperEl.style.display = '';
+    spinnerWrapperEl.style.opacity = '1';
+  });
+}
+
+    // const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
+    // spinnerWrapperEl.style.opacity = '0';
+    // spinnerWrapperEl.style.display = 'none';
 
     window.addEventListener('load', () => {
-  const icon = document.getElementById('loadingIcon');
-  if (icon) {
-    icon.classList.remove('spin-on-load');
-  }
-});
+      const icon = document.getElementById('loadingIcon');
+      if (icon) {
+        icon.classList.remove('spin-on-load');
+      }
+    });
 
     var i = 0;
     const typewriterSelector = document.querySelector('#header h2 > span');
     const typewriterPhrase = 'Passionate Versatile Technical Professional, a Front-end Connoisseur, a Web3 Aficionado.';
     var speed = 50;
+
 
     function typeWriter() {
       if (i < typewriterPhrase.length) {
