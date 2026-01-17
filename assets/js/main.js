@@ -255,24 +255,9 @@
       });
     }
 
-    if (document.fonts && document.fonts.load) {
-  document.fonts.load('1em "Bootstrap Icons"').then(() => {
-    spinnerWrapperEl.style.display = '';
-    spinnerWrapperEl.style.opacity = '1';
-  }).catch(() => {
-    spinnerWrapperEl.style.display = '';
-    spinnerWrapperEl.style.opacity = '1';
-  });
-} else {
-  window.addEventListener('DOMContentLoaded', () => {
-    spinnerWrapperEl.style.display = '';
-    spinnerWrapperEl.style.opacity = '1';
-  });
-}
-
-    // const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
-    // spinnerWrapperEl.style.opacity = '0';
-    // spinnerWrapperEl.style.display = 'none';
+    const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
+    spinnerWrapperEl.style.opacity = '0';
+    spinnerWrapperEl.style.display = 'none';
 
     window.addEventListener('load', () => {
       const icon = document.getElementById('loadingIcon');
