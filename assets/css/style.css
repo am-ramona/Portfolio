@@ -181,13 +181,13 @@
   font-display: swap;
 }
 
-:root {
-  --black: #010101;
-   --black: #000000;
+:root,
+[data-bs-theme="dark"] {
+  --black: #000000;
   --green: #7bAE37;
   --lightGreen: #BCFD49;
   --aquamarine: #62FCAF;
-  /* --white                  : #F2F1F1; */
+  --full-color: #ffffff;
   --white: #F0FFFF;
   --pink: #E3A393;
   --bs-body-color: #F0FFFF;
@@ -213,7 +213,40 @@
   /* --typewriter-duration: clamp(3s, 7vw, 8s);
   --typewriter-steps      : clamp(60, 90, 160); */
   --cursor-color: orange;
+}
 
+[data-bs-theme="light"] {
+  --black: #ffffff;
+  --green: blue;
+  --lightGreen: orange;
+  --aquamarine: #62FCAF;
+  --white: #1E2019;
+  --full-color: #000000;
+  --bs-body-color: #1E2019;
+  --pink: #E3A393;
+  --bs-link-color-rgb: #1E2019;
+  /* --bs-link-hover-color-rgb: #BCFE49; */
+  --bs-link-hover-color-rgb: #6F73D2;
+  --bs-progress-bar-color: #B6B544;
+  --bs-progress-bar-bg: #B6B544;
+  --roti: #6F73D2;
+  --twilightBlue: #1E2019;
+  --grey: #797986;
+  --lightGrey: #7D7E75;
+  --yellowish-color: #f2e9d0;
+  --dark-yellowish-color: #d4ccb6;
+  --accent-color: #6F73D2;
+  --typewriter-steps: 92;
+  --typewriter-duration: 5s;
+  /* --typewriter-duration: clamp(2s, 5vw, 6s);
+  --typewriter-steps      : clamp(40, 60, 120); */
+  /* --typewriter-duration: clamp(3s, 7vw, 8s);
+  --typewriter-steps      : clamp(60, 90, 160); */
+  --cursor-color: orange;
+}
+
+:root {
+  --light-color: rgba(204, 204, 204, 0.1);
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -259,7 +292,6 @@ body::before {
   content: "";
   position: fixed;
   background: var(--black);
-  /* background  : #0e0f11 url("../img/bg.jpg") top right no-repeat; */
   background-size: cover;
   left: 0;
   right: 0;
@@ -458,7 +490,7 @@ iframe {
   top: 0;
   right: 0;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--black);
 }
 
 #header.header-top .social-links,
@@ -533,14 +565,32 @@ iframe {
 }
 
 /*--------------------------------------------------------------
+# Color Theme
+--------------------------------------------------------------*/
+
+#utils {
+  position: absolute;
+  top: 12px;
+  right: 55px;
+  z-index: 999;
+  display: flex;
+  gap: 15px;
+}
+
+button#bd-theme {
+  background: transparent;
+}
+
+#color-theme-dropdown,
+.color-theme-list {
+  min-width: 62px;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
 # Audio Player Controls
 --------------------------------------------------------------*/
-.audio-player-container {
-  position: absolute;
-    top: 12px;
-    right: 55px;
-  z-index: 999;
-}
+.audio-player-container {}
 
 .control-btn {
   background: none;
@@ -617,7 +667,7 @@ iframe {
   background: var(--roti);
   cursor: pointer;
   margin-top: -6px;
- box-shadow: 1px 1px 1px #000000px, 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px #000000px, 0px 1px #0d0d0d;
 }
 
 /* Firefox */
@@ -819,7 +869,7 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--black);
   padding: 30px;
 }
 
@@ -1288,7 +1338,7 @@ section .container {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  background: rgba(204, 204, 204, 0.1);
+  background: var(--light-color);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   width: 100%;
@@ -1396,7 +1446,7 @@ section .container {
   line-height: 1;
   text-transform: uppercase;
   color: var(--white);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(from var(--full-color) r g b / 0.1);
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
@@ -1405,6 +1455,7 @@ section .container {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   background: var(--roti);
+  color: var(--bs-white);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1629,7 +1680,7 @@ section .container {
   grid-template-columns: 52px auto;
   padding: 20px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--light-color);
 }
 
 .contact .info-box i.bx {
@@ -1850,7 +1901,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
   margin: 0;
 }
 

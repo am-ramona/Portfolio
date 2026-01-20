@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
   <meta charset="utf-8">
@@ -52,18 +52,44 @@
     <i class="bi bi-currency-bitcoin spin-on-load" id="loadingIcon"></i>
   </h1>
 
-  <div class="audio-player-container">
-    <audio id="myAudio" src="assets/audio/Deep_Focus_Music.mp3" preload="auto"></audio>
+  <div id="utils">
+        <div class="audio-player-container">
+      <audio id="myAudio" src="assets/audio/Deep_Focus_Music.mp3" preload="auto"></audio>
 
-    <button id="playPauseButton" class="control-btn">
-      <i id="playIcon" class="bi bi-music-note"></i>
-      <i id="pauseIcon" class="bi bi-pause-fill" style="display: none;"></i>
-    </button>
+      <button id="playPauseButton" class="control-btn">
+        <i id="playIcon" class="bi bi-music-note"></i>
+        <i id="pauseIcon" class="bi bi-pause-fill" style="display: none;"></i>
+      </button>
 
-    <div id="volumeControl" class="volume-container" style="display: none;">
-      <i class="bi bi-volume-up-fill volume-icon"></i>
-      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+      <div id="volumeControl" class="volume-container" style="display: none;">
+        <i class="bi bi-volume-up-fill volume-icon"></i>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+      </div>
     </div>
+    <div id="color-theme-dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="bd-theme" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span id="theme-icon">🌓 </span>
+      </button>
+      <ul class="color-theme-list dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme">
+        <li>
+          <button type="button" class="dropdown-item" data-bs-theme-value="light">
+            🔆
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item" data-bs-theme-value="dark">
+            🌙
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item" data-bs-theme-value="auto">
+            🌓
+          </button>
+        </li>
+      </ul>
+    </div>  
+
   </div>
 
   <!-- ======= Header ======= -->
@@ -77,8 +103,7 @@
       <!-- <h2>I'm a <span>Passionate Versatile Technical Professional, a Front-end Connoisseur, a Web3 Aficionado.</span> -->
       <h2 data-no-editable="true">I'm a <span class="typed"
           data-typed-items="Passionate Versatile Technical Professional, Front-end Connoisseur, Web3 Aficionado"></span><span
-          class="typed-cursor typed-cursor--blink"></span></h2>
-
+          class="typed-cursor typed-cursor--blink"></span>
       </h2>
       <!-- <h7>'Code alone is just a tool. It is humans who must lead.''
       </h7> -->
@@ -1080,7 +1105,8 @@
                 <p>Dapp</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/aiNftGenerator.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Blockchain NFT Minting DApp with AI-generated assets and production-grade mint UX: https://github.com/am-ramona/NFT-AI-Generator"><i
+                    class="portfolio-lightbox"
+                    title="Blockchain NFT Minting DApp with AI-generated assets and production-grade mint UX: https://github.com/am-ramona/NFT-AI-Generator"><i
                       class="bx bx-plus"></i></a>
                   <!-- <a href="portfolio-details.htm?name=esher" data-gallery="portfolioDetailsGallery"
                   data-glightbox="type: external" class="portfolio-details-lightbox" title="Esher"><i

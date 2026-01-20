@@ -28,6 +28,95 @@
     }
   }
 
+   const getStoredTheme = () => localStorage.getItem('theme');
+    const setStoredTheme = theme => localStorage.setItem('theme', theme);
+
+    const getPreferredTheme = () => {
+        const storedTheme = getStoredTheme();
+        if (storedTheme) {
+            return storedTheme;
+        }
+        // Default to 'auto' mode which respects the user's system preference
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+
+    const setTheme = theme => {
+        if (theme === 'auto') {
+            document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+        } else {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+        }
+        updateThemeStatus(theme);
+    };
+
+    // Function to update UI elements (dropdown icon and text)
+    const updateThemeStatus = selectedTheme => {
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+        const statusElement = document.getElementById('current-theme-status');
+        
+        // Update status text
+        if (statusElement) {
+            statusElement.textContent = selectedTheme;
+        }
+
+        // Update dropdown UI
+        let icon = '';
+        let text = '';
+        switch (selectedTheme) {
+            case 'light':
+                icon = '🔆';
+                text = 'Light';
+                break;
+            case 'dark':
+                icon = '🌙';
+                text = 'Dark';
+                break;
+            case 'auto':
+                icon = '⚙️';
+                text = 'Auto';
+                break;
+        }
+        if (themeIcon) themeIcon.textContent = icon;
+        if (themeText) themeText.textContent = text;
+
+        // Mark the active item in the dropdown
+        document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+            element.classList.remove('active');
+            element.setAttribute('aria-pressed', 'false');
+        });
+        const activeThemeButton = document.querySelector(`[data-bs-theme-value="${selectedTheme}"]`);
+        if (activeThemeButton) {
+            activeThemeButton.classList.add('active');
+            activeThemeButton.setAttribute('aria-pressed', 'true');
+        }
+    };
+
+    // Initial theme setting on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const initialTheme = getPreferredTheme();
+        setTheme(initialTheme);
+        updateThemeStatus(getStoredTheme() || 'auto'); // Update dropdown UI based on stored pref or auto
+    });
+    
+    // Listen for system theme changes if in 'auto' mode
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (getStoredTheme() === 'auto') {
+            setTheme('auto');
+        }
+    });
+
+    // Handle dropdown item clicks
+    document.querySelectorAll('[data-bs-theme-value]')
+        .forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const theme = toggle.getAttribute('data-bs-theme-value');
+                setStoredTheme(theme);
+                setTheme(theme);
+                updateThemeStatus(theme);
+            });
+        });
+
   /**
    * Scrolls to an element with header offset
    */
