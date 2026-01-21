@@ -32,87 +32,97 @@
   /**
  * Switch color theme
  */
-  const getStoredTheme = () => localStorage.getItem('theme');
-  const setStoredTheme = theme => localStorage.setItem('theme', theme);
+const getStoredTheme = () => localStorage.getItem('theme');
+const setStoredTheme = theme => localStorage.setItem('theme', theme);
 
-  const getPreferredTheme = () => {
-    const storedTheme = getStoredTheme();
-    if (storedTheme) {
-      return storedTheme;
-    }
+const getPreferredTheme = () => {
+  const storedTheme = getStoredTheme();
+  if (storedTheme) return storedTheme;
 
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  };
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
+};
 
-  const setTheme = theme => {
-    if (theme === 'auto') {
-      document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-    } else {
-      document.documentElement.setAttribute('data-bs-theme', theme);
-    }
-    updateThemeStatus(theme);
-  };
+const setTheme = theme => {
+  if (theme === 'auto') {
+    document.documentElement.setAttribute(
+      'data-bs-theme',
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+    );
+  } else {
+    document.documentElement.setAttribute('data-bs-theme', theme);
+  }
 
-  const updateThemeStatus = selectedTheme => {
-    const themeIcon = document.getElementById('theme-icon');
-    const themeText = document.getElementById('theme-text');
-    const statusElement = document.getElementById('current-theme-status');
+  updateThemeStatus(theme);
+};
 
-    if (statusElement) {
-      statusElement.textContent = selectedTheme;
-    }
+const updateThemeStatus = selectedTheme => {
+  const themeIconWrapper = document.getElementById('theme-icon');
+  const themeIcon = themeIconWrapper?.querySelector('i');
 
-    let icon = '';
-    let text = '';
-    switch (selectedTheme) {
-      case 'light':
-        icon = '🔆';
-        text = 'Light';
-        break;
-      case 'dark':
-        icon = '🌙';
-        text = 'Dark';
-        break;
-      case 'auto':
-        icon = '⚙️';
-        text = 'Auto';
-        break;
-    }
-    if (themeIcon) themeIcon.textContent = icon;
-    if (themeText) themeText.textContent = text;
+  let iconClass = '';
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-      element.classList.remove('active');
-      element.setAttribute('aria-pressed', 'false');
-    });
-    const activeThemeButton = document.querySelector(`[data-bs-theme-value="${selectedTheme}"]`);
-    if (activeThemeButton) {
-      activeThemeButton.classList.add('active');
-      activeThemeButton.setAttribute('aria-pressed', 'true');
-    }
-  };
+  switch (selectedTheme) {
+    case 'light':
+      iconClass = 'bi bi-sun-fill';
+      break;
+    case 'dark':
+      iconClass = 'bi bi-moon-stars-fill';
+      break;
+    case 'auto':
+    default:
+      iconClass = 'bi bi-circle-half';
+      break;
+  }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const initialTheme = getPreferredTheme();
-    setTheme(initialTheme);
-    updateThemeStatus(getStoredTheme() || 'auto'); // Update dropdown UI based on stored pref or auto
+  // ✅ Correct way to swap Bootstrap icons
+  if (themeIcon) {
+    themeIcon.className = iconClass;
+  }
+
+  // Update active state in dropdown
+  document.querySelectorAll('[data-bs-theme-value]').forEach(el => {
+    el.classList.remove('active');
+    el.setAttribute('aria-pressed', 'false');
   });
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  const activeButton = document.querySelector(
+    `[data-bs-theme-value="${selectedTheme}"]`
+  );
+
+  if (activeButton) {
+    activeButton.classList.add('active');
+    activeButton.setAttribute('aria-pressed', 'true');
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const theme = getPreferredTheme();
+  setTheme(theme);
+  updateThemeStatus(theme);
+});
+
+window
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', () => {
     if (getStoredTheme() === 'auto') {
       setTheme('auto');
     }
   });
 
-  document.querySelectorAll('[data-bs-theme-value]')
-    .forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const theme = toggle.getAttribute('data-bs-theme-value');
-        setStoredTheme(theme);
-        setTheme(theme);
-        updateThemeStatus(theme);
-      });
+document
+  .querySelectorAll('[data-bs-theme-value]')
+  .forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const theme = toggle.getAttribute('data-bs-theme-value');
+      setStoredTheme(theme);
+      setTheme(theme);
     });
+  });
+
 
   /**
    * Scrolls to an element with header offset

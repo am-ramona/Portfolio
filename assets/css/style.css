@@ -247,6 +247,7 @@
 
 :root {
   --light-color: rgba(204, 204, 204, 0.1);
+  --yellow: #F7B32B;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -577,6 +578,13 @@ iframe {
   gap: 15px;
 }
 
+@media (max-width: 480px) {
+  #utils {
+    top: 48px;
+    right: 12px;
+  }
+}
+
 button#bd-theme {
   background: transparent;
   border-color: var(--roti);
@@ -590,6 +598,10 @@ button#bd-theme::after {
 .color-theme-list {
   min-width: 62px;
   position: relative;
+}
+
+#color-theme-dropdown .bi {
+  color: var(--yellow);
 }
 
 /*--------------------------------------------------------------
