@@ -1000,7 +1000,7 @@ section .container {
   width: 100%;
   position: relative;
   text-align: center;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--light-color);
 }
 
 .counts .count-box i {
@@ -1089,7 +1089,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--light-color);
   transition: ease-in-out 0.3s;
 }
 
@@ -1124,7 +1124,7 @@ section .container {
   grid-column-gap: 10px;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--light-color);
   transition: ease-in-out 0.3s;
 }
 
@@ -1213,7 +1213,7 @@ section .container {
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
   color: var(--twilightBlue);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--light-color);
   border-radius: 6px;
   position: relative;
   z-index: 1;
@@ -1231,6 +1231,7 @@ section .container {
   height: 12px;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(from var(--full-color) r g b / 0.3);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
@@ -1451,7 +1452,7 @@ section .container {
   line-height: 1;
   text-transform: uppercase;
   color: var(--white);
-  background: rgb(from var(--full-color) r g b / 0.1);
+  background: var(--light-color);
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
