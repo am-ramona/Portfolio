@@ -189,6 +189,7 @@
   --aquamarine: #62FCAF;
   --full-color: #ffffff;
   --white: #F0FFFF;
+  --off-white: rgba(255, 255, 255, 0.2);
   --pink: #E3A393;
   --bs-body-color: #F0FFFF;
   --bs-link-color-rgb: #F0FFFF;
@@ -221,6 +222,7 @@
   --lightGreen: orange;
   --aquamarine: #62FCAF;
   --white: #1E2019;
+  --off-white: rgba(0, 0, 0, 0.2);
   --full-color: #000000;
   --bs-body-color: #1E2019;
   --pink: #E3A393;
@@ -1304,7 +1306,7 @@ section .container {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid var(--off-white);
   position: relative;
 }
 
@@ -1314,7 +1316,7 @@ section .container {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #E0BDCE;
+  color: var(--roti);
   margin-bottom: 10px;
 }
 
@@ -1347,8 +1349,8 @@ section .container {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #E0BDCE;
-  border: 2px solid #E0BDCE;
+  background: var(--roti);
+  border: 2px solid var(--roti);
 }
 
 /*--------------------------------------------------------------
