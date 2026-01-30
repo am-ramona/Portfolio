@@ -622,7 +622,7 @@ button#bd-theme::after {
 }
 
 .volume-icon {
-  color: #09E85E;
+  color: var(--roti);
 }
 
 #playPauseButton {
