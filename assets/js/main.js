@@ -32,96 +32,96 @@
   /**
  * Switch color theme
  */
-const getStoredTheme = () => localStorage.getItem('theme');
-const setStoredTheme = theme => localStorage.setItem('theme', theme);
+  const getStoredTheme = () => localStorage.getItem('theme');
+  const setStoredTheme = theme => localStorage.setItem('theme', theme);
 
-const getPreferredTheme = () => {
-  const storedTheme = getStoredTheme();
-  if (storedTheme) return storedTheme;
+  const getPreferredTheme = () => {
+    const storedTheme = getStoredTheme();
+    if (storedTheme) return storedTheme;
 
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light';
-};
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  };
 
-const setTheme = theme => {
-  if (theme === 'auto') {
-    document.documentElement.setAttribute(
-      'data-bs-theme',
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light'
-    );
-  } else {
-    document.documentElement.setAttribute('data-bs-theme', theme);
-  }
-
-  updateThemeStatus(theme);
-};
-
-const updateThemeStatus = selectedTheme => {
-  const themeIconWrapper = document.getElementById('theme-icon');
-  const themeIcon = themeIconWrapper?.querySelector('i');
-
-  let iconClass = '';
-
-  switch (selectedTheme) {
-    case 'light':
-      iconClass = 'bi bi-sun-fill';
-      break;
-    case 'dark':
-      iconClass = 'bi bi-moon-stars-fill';
-      break;
-    case 'auto':
-    default:
-      iconClass = 'bi bi-circle-half';
-      break;
-  }
-
-  // ✅ Correct way to swap Bootstrap icons
-  if (themeIcon) {
-    themeIcon.className = iconClass;
-  }
-
-  // Update active state in dropdown
-  document.querySelectorAll('[data-bs-theme-value]').forEach(el => {
-    el.classList.remove('active');
-    el.setAttribute('aria-pressed', 'false');
-  });
-
-  const activeButton = document.querySelector(
-    `[data-bs-theme-value="${selectedTheme}"]`
-  );
-
-  if (activeButton) {
-    activeButton.classList.add('active');
-    activeButton.setAttribute('aria-pressed', 'true');
-  }
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  const theme = getPreferredTheme();
-  setTheme(theme);
-  updateThemeStatus(theme);
-});
-
-window
-  .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', () => {
-    if (getStoredTheme() === 'auto') {
-      setTheme('auto');
+  const setTheme = theme => {
+    if (theme === 'auto') {
+      document.documentElement.setAttribute(
+        'data-bs-theme',
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+      );
+    } else {
+      document.documentElement.setAttribute('data-bs-theme', theme);
     }
+
+    updateThemeStatus(theme);
+  };
+
+  const updateThemeStatus = selectedTheme => {
+    const themeIconWrapper = document.getElementById('theme-icon');
+    const themeIcon = themeIconWrapper?.querySelector('i');
+
+    let iconClass = '';
+
+    switch (selectedTheme) {
+      case 'light':
+        iconClass = 'bi bi-sun-fill';
+        break;
+      case 'dark':
+        iconClass = 'bi bi-moon-stars-fill';
+        break;
+      case 'auto':
+      default:
+        iconClass = 'bi bi-circle-half';
+        break;
+    }
+
+    // ✅ Correct way to swap Bootstrap icons
+    if (themeIcon) {
+      themeIcon.className = iconClass;
+    }
+
+    // Update active state in dropdown
+    document.querySelectorAll('[data-bs-theme-value]').forEach(el => {
+      el.classList.remove('active');
+      el.setAttribute('aria-pressed', 'false');
+    });
+
+    const activeButton = document.querySelector(
+      `[data-bs-theme-value="${selectedTheme}"]`
+    );
+
+    if (activeButton) {
+      activeButton.classList.add('active');
+      activeButton.setAttribute('aria-pressed', 'true');
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const theme = getPreferredTheme();
+    setTheme(theme);
+    updateThemeStatus(theme);
   });
 
-document
-  .querySelectorAll('[data-bs-theme-value]')
-  .forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const theme = toggle.getAttribute('data-bs-theme-value');
-      setStoredTheme(theme);
-      setTheme(theme);
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', () => {
+      if (getStoredTheme() === 'auto') {
+        setTheme('auto');
+      }
     });
-  });
+
+  document
+    .querySelectorAll('[data-bs-theme-value]')
+    .forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const theme = toggle.getAttribute('data-bs-theme-value');
+        setStoredTheme(theme);
+        setTheme(theme);
+      });
+    });
 
 
   /**
@@ -313,15 +313,23 @@ document
     const selectTyped = document.querySelector('.typed');
     if (selectTyped) {
       let typed_strings = selectTyped.getAttribute('data-typed-items');
-      typed_strings = typed_strings.split(',');
+      typed_strings = typed_strings.split('|').map(s => s.trim())
+        .filter(Boolean)
+        .map(s => s.replace(/\.$/, ''));
+      ;
       new Typed('.typed', {
         strings: typed_strings,
         loop: true,
         typeSpeed: 65,
         backSpeed: 50,
-        backDelay: 2000
+        backDelay: 2000,
+        smartBackspace: false
       });
     }
+
+    /**
+ * Back To Top event
+ */
 
     const backToTopIcon = document.querySelector('#back-to-top');
     const scrollThreshold = 400;
@@ -425,7 +433,7 @@ document
   });
 
   /**
-   * Porfolio isotope and filter
+   * Portfolio isotope and filter
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
