@@ -410,7 +410,7 @@ iframe {
   /* font-family : inherit; */
   letter-spacing: 1.3px;
   margin-top: 20px;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   align-self: flex-start;
   /* border-right: .15em solid var(--cursor-color);  */
@@ -535,6 +535,14 @@ iframe {
 
   #header .social-links {
     align-self: flex-start;
+  }
+
+  #header h2 {
+    min-height: 65px;
+  }
+
+  #header .navbar {
+    margin-top: 0;
   }
 }
 
@@ -1529,8 +1537,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid var(--white);
-  border-left: 3px solid var(--white);
+  border-top: 3px solid var(--bs-white);
+  border-left: 3px solid var(--bs-white);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -1543,20 +1551,20 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid var(--white);
-  border-right: 3px solid var(--white);
+  border-bottom: 3px solid var(--bs-white);
+  border-right: 3px solid var(--bs-white);
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: var(--white);
+  color: var(--bs-white);
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: var(--white);
+  color: var(--bs-white);
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -1569,7 +1577,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: var(--white);
+  color: var(--bs-white);
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
@@ -1631,8 +1639,9 @@ section .container {
 }
 
 .portfolio-details .portfolio-info {
-  padding-top: 45px;
   font-family: "Lato", sans-serif;
+  color: var(--bs-white);
+  padding-top: 45px;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1640,25 +1649,21 @@ section .container {
   font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  /* font-family: "Lato", sans-serif; */
 }
 
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
-  font-family: "Lato", sans-serif;
 }
 
 .portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
-  font-family: "Lato", sans-serif;
 }
 
 .portfolio-details .portfolio-info p {
   font-size: 15px;
   padding: 15px 0 0 0;
-  font-family: "Lato", sans-serif;
 }
 
 .glightbox-clean .gslide-title {
