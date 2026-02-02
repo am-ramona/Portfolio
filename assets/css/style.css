@@ -1677,6 +1677,10 @@ section .container {
   }
 }
 
+.portfolio-details-slider img {
+    max-height: 79vh;
+}
+
 .portfolio-details .swiper-pagination {
   margin-top: 20px;
   position: relative;
