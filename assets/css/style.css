@@ -940,7 +940,8 @@ section .container {
   margin: 4px 10px;
 }
 
-.section-title p {
+.section-title p,
+.section-title span {
   margin: 0;
   font-size: 36px;
   font-weight: 100;
@@ -1303,6 +1304,24 @@ section .container {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume .resume-header {
+  display: grid;
+  grid-auto-columns: auto 1fr;
+  grid-template-areas:
+    "a a"
+    "b c";
+}
+
+.resume .resume-label {
+  grid-area: b;
+}
+
+.resume .btn {
+  grid-area: c;
+  justify-self: flex-end;
+  align-self: center;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -1678,7 +1697,7 @@ section .container {
 }
 
 .portfolio-details-slider img {
-    max-height: 79vh;
+  max-height: 79vh;
 }
 
 .portfolio-details .swiper-pagination {
