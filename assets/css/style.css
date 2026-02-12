@@ -1320,7 +1320,42 @@ section .container {
   grid-area: c;
   justify-self: flex-end;
   align-self: center;
+  border: none;
+  padding: 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
 }
+
+.resume .btn>span {
+  color: var(--roti);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.resume .btn>span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: 1px;
+  width: 0%;
+  background: currentColor;
+  transition: width 300ms ease;
+}
+
+.resume .btn>span:hover::after {
+  width: 100%;
+}
+
+/* .resume .btn:hover>span {
+      background: linear-gradient(#eee, #333);
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
 
 .resume .resume-title {
   font-size: 26px;
