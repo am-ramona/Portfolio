@@ -940,15 +940,15 @@ section .container {
   margin: 4px 10px;
 }
 
-.section-subtitle h2{
+.section-subtitle h2 {
   font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--lightGrey);
-    font-family: "Poppins", sans-serif;
-        margin: 0px 0 10px 0;
+  font-weight: 500;
+  padding: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--lightGrey);
+  font-family: "Poppins", sans-serif;
+  margin: 0px 0 10px 0;
 }
 
 /* .section-subtitle::after {
@@ -1079,25 +1079,33 @@ section .container {
 # Skills
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 113px;  /* 60px */
+  height: 110px;
+  /* 60px */
   display: block;
   background: none;
   border-radius: 0;
 }
 
-.skills .progress>span:first-child{
+.skills .skills-content .col-lg-6:nth-child(2) .progress:nth-last-child(2) {
+  height: 70px;
+}
+
+.skills .skills-content .col-lg-6:nth-child(2) .progress:last-child {
+  height: 40px;
+}
+
+.skills .progress>span:first-child {
   text-transform: uppercase;
 }
 
 .skills .progress .skill {
-  padding: 10px 0;
+  padding: 0;
   margin: 0;
   /* text-transform: uppercase; */
   display: block;
-  font-weight: 600;
-  /* font-family: "Poppins", sans-serif; */
-  /* font-family: 'Poiret One', sans-serif; */
+  font-weight: 300;
   color: var(--white);
+  font-family: 'Lato';
 }
 
 .skills .progress .skill .val {

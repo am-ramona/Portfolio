@@ -210,10 +210,10 @@
 
   // let isPlaying = false;
   let isPlaying = !audio.paused && !audio.ended && audio.currentTime > 0;
-//   const isPlaying = () => {
-//   if (!audio) return false;
-//   return !audio.paused && !audio.ended && audio.currentTime > 0;
-// };
+  //   const isPlaying = () => {
+  //   if (!audio) return false;
+  //   return !audio.paused && !audio.ended && audio.currentTime > 0;
+  // };
 
   function togglePlayPause() {
     if (isPlaying) {
