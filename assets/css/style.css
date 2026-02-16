@@ -583,7 +583,7 @@ iframe {
   position: absolute;
   top: 12px;
   right: 55px;
-  z-index: 999;
+  z-index: 0;
   display: flex;
   gap: 15px;
 }
@@ -1059,20 +1059,24 @@ section .container {
 # Skills
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 60px;
+  height: 113px;  /* 60px */
   display: block;
   background: none;
   border-radius: 0;
 }
 
+.skills .progress>span:first-child{
+  text-transform: uppercase;
+}
+
 .skills .progress .skill {
   padding: 10px 0;
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: block;
   font-weight: 600;
   /* font-family: "Poppins", sans-serif; */
-  font-family: 'Poiret One', sans-serif;
+  /* font-family: 'Poiret One', sans-serif; */
   color: var(--white);
 }
 
