@@ -899,25 +899,6 @@ section .container {
   padding: 30px;
 }
 
-@media (max-width: 768px) {
-  section {
-    top: 120px;
-  }
-
-  section.section-show {
-    top: 80px;
-  }
-
-  .about-me .section-title p {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .about-me .content h3+p {
-    text-indent: 15px;
-  }
-}
-
 .section-title h2 {
   font-size: 14px;
   font-weight: 500;
@@ -967,6 +948,25 @@ section .container {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   margin: 0 0 15px 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    top: 120px;
+  }
+
+  section.section-show {
+    top: 80px;
+  }
+
+  .section-title p, .section-title span {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .about-me .content h3+p {
+    text-indent: 15px;
+  }
 }
 
 /*--------------------------------------------------------------
