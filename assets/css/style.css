@@ -592,7 +592,7 @@ iframe {
   #utils {
     top: 48px;
     right: 12px;
-     z-index: 0;
+    z-index: 0;
   }
 }
 
@@ -754,17 +754,17 @@ button#bd-theme::after {
 
 .navbar a,
 .navbar a:focus {
-      display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--white);
-    line-height: 1px;
-    letter-spacing: 2px;
-    padding: 0px;
-    white-space: nowrap;
-    transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1px;
+  letter-spacing: 2px;
+  padding: 0px;
+  white-space: nowrap;
+  transition: 0.3s;
 }
 
 .navbar a i,
@@ -950,25 +950,6 @@ section .container {
   margin: 0 0 15px 0;
 }
 
-@media (max-width: 768px) {
-  section {
-    top: 120px;
-  }
-
-  section.section-show {
-    top: 80px;
-  }
-
-  .section-title p, .section-title span {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .about-me .content h3+p {
-    text-indent: 15px;
-  }
-}
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -1126,6 +1107,52 @@ section .container {
   transition: 0.9s;
   background-color: var(--roti);
 }
+
+@media (max-width: 768px) {
+  section {
+    top: 120px;
+  }
+
+  section.section-show {
+    top: 80px;
+  }
+
+  .section-title p,
+  .section-title span {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .about-me .content h3+p {
+    text-indent: 15px;
+  }
+
+  .skills .progress {
+    height: 130px;
+  }
+
+  .skills .progress:nth-child(2) {
+    height: 165px;
+  }
+
+  .skills .skills-content .col-lg-6:nth-child(2) .progress:first-child {
+    height: 93px;
+  }
+
+  .skills .skills-content .col-lg-6:nth-child(2) .progress:nth-last-child(2) {
+    height: 78px;
+  }
+
+  .section-title h2::after {
+    width: 92px;
+  }
+
+  .interests:nth-of-type(5) .section-title h2::after {
+    width: 11px;
+  }
+
+}
+
 
 /*--------------------------------------------------------------
 # Awards, Interests, Organizations
