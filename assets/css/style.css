@@ -902,7 +902,6 @@ section .container {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
-  line-height: 1px;
   margin: 0 0 15px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1144,11 +1143,7 @@ section .container {
   }
 
   .section-title h2::after {
-    width: 92px;
-  }
-
-  .interests:nth-of-type(5) .section-title h2::after {
-    width: 11px;
+    width: 85px;
   }
 
 }
