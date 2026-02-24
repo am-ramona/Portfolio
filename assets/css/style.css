@@ -465,6 +465,8 @@ iframe {
 #header .social-links {
   margin-top: 40px;
   display: flex;
+  height: 100px;
+  margin-left: 2em;
 }
 
 #header .social-links a {
