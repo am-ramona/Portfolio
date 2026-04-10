@@ -597,16 +597,16 @@ iframe {
 
 #utils {
   position: absolute;
-  top: 60px;
+  top: 12px;
   right: 55px;
   z-index: 999;
   display: flex;
   gap: 15px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1600px) {
   #utils {
-    top: 48px;
+    top: 60px;
     right: 12px;
   }
 }
@@ -1128,7 +1128,7 @@ section .container {
   }
 
   section.section-show {
-    top: 80px;
+    top: 100px;
   }
 
   .section-title p,
