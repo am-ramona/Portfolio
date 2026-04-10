@@ -359,6 +359,9 @@
       });
     }
 
+    document.fonts.ready.then(() => {
+      
+
     const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
     spinnerWrapperEl.style.opacity = '0';
     spinnerWrapperEl.style.display = 'none';
@@ -369,6 +372,8 @@
         icon.classList.remove('spin-on-load');
       }
     });
+
+  });
 
     var i = 0;
     const typewriterSelector = document.querySelector('#header h2 > span');
