@@ -597,7 +597,7 @@ iframe {
 
 #utils {
   position: absolute;
-  top: 12px;
+  top: 60px;
   right: 55px;
   z-index: 999;
   display: flex;
