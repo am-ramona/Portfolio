@@ -445,7 +445,7 @@ iframe {
 
 #header h2 span {
   letter-spacing: 1px;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--roti);
   color: var(--white);
 }
 
