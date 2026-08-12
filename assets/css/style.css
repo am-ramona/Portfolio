@@ -493,7 +493,7 @@ iframe {
   border-radius: 50%;
   width: 40px;
   height: 40px; */
-   color: var(--roti);
+  color: var(--roti);
 }
 
 #header .social-links a:hover {
@@ -1140,7 +1140,8 @@ section .container {
   .about-me .content h3+p {
     text-indent: 15px;
   }
-/* 
+
+  /* 
   .skills .progress {
     height: 130px;
   } */
@@ -2082,32 +2083,32 @@ body {
 
 html,
 body {
-        cursor: none;        
+  cursor: none;
 }
 
 .cursor-dot,
 .cursor-dot-outline {
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease-in-out,
-                transform 0.3s ease-in-out;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--roti);
-    z-index: 9999;
+  width: 8px;
+  height: 8px;
+  background-color: var(--roti);
+  z-index: 9999;
 }
 
 .cursor-dot-outline {
-    width: 40px;
-    height: 40px;
-      background-color: color-mix(in srgb, var(--roti) 50%, transparent);
-    z-index: 9998;
+  width: 40px;
+  height: 40px;
+  background-color: color-mix(in srgb, var(--roti) 50%, transparent);
+  z-index: 9998;
 }
