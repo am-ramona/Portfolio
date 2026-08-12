@@ -35,18 +35,18 @@
     const storedTheme = getStoredTheme();
     if (storedTheme) return storedTheme;
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ?
+      "dark" :
+      "light";
   };
 
   const setTheme = (theme) => {
     if (theme === "auto") {
       document.documentElement.setAttribute(
         "data-bs-theme",
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light"
+        window.matchMedia("(prefers-color-scheme: dark)").matches ?
+        "dark" :
+        "light"
       );
     } else {
       document.documentElement.setAttribute("data-bs-theme", theme);
@@ -361,7 +361,10 @@
     if (backToTopIcon) {
       backToTopIcon.addEventListener("click", () => {
         console.log("Back-to-top clicked");
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       });
     }
 
