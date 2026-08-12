@@ -368,7 +368,8 @@
       });
     }
 
-    document.fonts.ready.then(() => {
+    // document.fonts.ready.then(() => {
+    document.fonts.load('16px "bootstrap-icons"').then(() => {
       const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
       spinnerWrapperEl.style.opacity = "0";
       spinnerWrapperEl.style.display = "none";
