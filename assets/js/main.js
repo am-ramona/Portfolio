@@ -458,7 +458,7 @@
       var self = this;
 
       // Anchor hovering
-      document.querySelectorAll("a").forEach(function (el) {
+      document.querySelectorAll("a, button").forEach(function (el) {
         el.addEventListener("mouseover", function () {
           self.cursorEnlarged = true;
           self.toggleCursorSize();
