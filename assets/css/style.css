@@ -1081,10 +1081,10 @@ section .container {
   border-radius: 0;
 }
 
-.skills .skills-content .col-lg-6:nth-child(2) .progress:first-child,
+/* .skills .skills-content .col-lg-6:nth-child(2) .progress:first-child,
 .skills .skills-content .col-lg-6:nth-child(2) .progress:nth-last-child(2) {
   height: 85px;
-}
+} */
 
 .skills .skills-content .col-lg-6:nth-child(2) .progress:last-child {
   height: 40px;
@@ -1140,17 +1140,17 @@ section .container {
   .about-me .content h3+p {
     text-indent: 15px;
   }
-
+/* 
   .skills .progress {
     height: 130px;
-  }
+  } */
 
-  .skills .progress:nth-child(2) {
+  /* .skills .progress:nth-child(2) {
     height: 165px;
-  }
+  } */
 
   .skills .skills-content .col-lg-6:nth-child(2) .progress:first-child {
-    height: 93px;
+    /* height: 93px; */
     margin-top: 15px;
   }
 
@@ -2078,4 +2078,36 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+html,
+body {
+        cursor: none;        
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out,
+                transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--roti);
+    z-index: 9999;
+}
+
+.cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+      background-color: color-mix(in srgb, var(--roti) 50%, transparent);
+    z-index: 9998;
 }
