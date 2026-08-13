@@ -205,29 +205,73 @@
   const volumeSlider = document.getElementById("volumeSlider");
 
   let isPlaying = false;
+  let audioLoaded = false;
 
-  // Sync initial volume from slider
-  if (volumeSlider && typeof volumeSlider.value !== "undefined") {
-    audio.volume = volumeSlider.value;
+  // --------------------------------------------------
+  // Load audio only after page is fully loaded + user interaction
+  // --------------------------------------------------
+
+  function loadAudio() {
+    if (audioLoaded) return;
+
+    audio.src = audio.dataset.src;
+    audio.load();
+
+    audioLoaded = true;
+
+    window.removeEventListener("pointerdown", loadAudio);
+    window.removeEventListener("keydown", loadAudio);
+    window.removeEventListener("touchstart", loadAudio);
   }
 
-  // Helper to update the UI based on state
+  // Wait until the entire page has loaded
+  window.addEventListener("load", () => {
+    // Initial responsive state
+    applySmallScreenRule();
+
+    // First user interaction loads the audio
+    window.addEventListener("pointerdown", loadAudio, { once: true });
+    window.addEventListener("keydown", loadAudio, { once: true });
+    window.addEventListener("touchstart", loadAudio, { once: true });
+  });
+
+  // --------------------------------------------------
+  // UI
+  // --------------------------------------------------
+
   function updateUI() {
-    if (playIcon) playIcon.style.display = isPlaying ? "none" : "inline";
-    if (pauseIcon) pauseIcon.style.display = isPlaying ? "inline" : "none";
+    if (playIcon) {
+      playIcon.style.display = isPlaying ? "none" : "inline";
+    }
+
+    if (pauseIcon) {
+      pauseIcon.style.display = isPlaying ? "inline" : "none";
+    }
+
     applySmallScreenRule();
   }
 
-  // Button click
+  // --------------------------------------------------
+  // Play / Pause
+  // --------------------------------------------------
+
   playPauseButton.addEventListener("click", () => {
+    // This click itself counts as user interaction
+    loadAudio();
+
     if (audio.paused) {
-      audio.play().catch((error) => console.log("Play failed:", error));
+      audio.play().catch((error) => {
+        console.log("Play failed:", error);
+      });
     } else {
       audio.pause();
     }
   });
 
-  // Audio state listeners — source of truth
+  // --------------------------------------------------
+  // Audio state
+  // --------------------------------------------------
+
   audio.addEventListener("play", () => {
     isPlaying = true;
     updateUI();
@@ -244,25 +288,36 @@
     updateUI();
   });
 
-  // Volume: slider -> audio
-  volumeSlider.addEventListener("input", (e) => {
-    audio.volume = e.target.value;
-  });
+  // --------------------------------------------------
+  // Volume
+  // --------------------------------------------------
 
-  // Volume: audio -> slider
+  if (volumeSlider) {
+    audio.volume = Number(volumeSlider.value);
+
+    volumeSlider.addEventListener("input", (e) => {
+      audio.volume = Number(e.target.value);
+    });
+  }
+
   audio.addEventListener("volumechange", () => {
-    if (volumeSlider) volumeSlider.value = audio.volume;
+    if (volumeSlider) {
+      volumeSlider.value = audio.volume;
+    }
   });
 
-  // Responsive: show volume only on wide screens while playing
+  // --------------------------------------------------
+  // Responsive volume control
+  // --------------------------------------------------
+
   function applySmallScreenRule() {
     const isNarrow = window.matchMedia("(max-width: 767px)").matches;
+
     if (volumeControl) {
       volumeControl.style.display = !isNarrow && isPlaying ? "flex" : "none";
     }
   }
 
-  window.addEventListener("load", applySmallScreenRule);
   window.addEventListener("resize", applySmallScreenRule);
   /**
    * Activate/show sections on load with hash links
