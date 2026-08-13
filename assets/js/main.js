@@ -35,18 +35,18 @@
     const storedTheme = getStoredTheme();
     if (storedTheme) return storedTheme;
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ?
-      "dark" :
-      "light";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   };
 
   const setTheme = (theme) => {
     if (theme === "auto") {
       document.documentElement.setAttribute(
         "data-bs-theme",
-        window.matchMedia("(prefers-color-scheme: dark)").matches ?
-        "dark" :
-        "light"
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
       );
     } else {
       document.documentElement.setAttribute("data-bs-theme", theme);
@@ -204,81 +204,66 @@
   const volumeControl = document.getElementById("volumeControl");
   const volumeSlider = document.getElementById("volumeSlider");
 
+  let isPlaying = false;
+
+  // Sync initial volume from slider
   if (volumeSlider && typeof volumeSlider.value !== "undefined") {
     audio.volume = volumeSlider.value;
   }
 
-  // let isPlaying = false;
-  let isPlaying = !audio.paused && !audio.ended && audio.currentTime > 0;
-  //   const isPlaying = () => {
-  //   if (!audio) return false;
-  //   return !audio.paused && !audio.ended && audio.currentTime > 0;
-  // };
-
-  function togglePlayPause() {
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
+  // Helper to update the UI based on state
+  function updateUI() {
+    if (playIcon) playIcon.style.display = isPlaying ? "none" : "inline";
+    if (pauseIcon) pauseIcon.style.display = isPlaying ? "inline" : "none";
+    applySmallScreenRule();
   }
 
+  // Button click
   playPauseButton.addEventListener("click", () => {
     if (audio.paused) {
-      audio.play().catch((error) => {
-        console.log("Play failed:", error);
-      });
+      audio.play().catch((error) => console.log("Play failed:", error));
     } else {
       audio.pause();
     }
   });
 
-  const isNarrow = window.matchMedia("(max-width: 767px)").matches;
-
+  // Audio state listeners — source of truth
   audio.addEventListener("play", () => {
     isPlaying = true;
-    if (playIcon) playIcon.style.display = "none";
-    if (pauseIcon) pauseIcon.style.display = "inline";
-    if (volumeControl && !isNarrow) volumeControl.style.display = "flex";
+    updateUI();
   });
 
   audio.addEventListener("pause", () => {
     isPlaying = false;
-    if (playIcon) playIcon.style.display = "inline";
-    if (pauseIcon) pauseIcon.style.display = "none";
-    if (volumeControl) volumeControl.style.display = "none";
+    updateUI();
   });
 
   audio.addEventListener("ended", () => {
     isPlaying = false;
-    if (playIcon) playIcon.style.display = "inline";
-    if (pauseIcon) pauseIcon.style.display = "none";
-    if (volumeControl) volumeControl.style.display = "none";
     audio.currentTime = 0;
+    updateUI();
   });
 
+  // Volume: slider -> audio
   volumeSlider.addEventListener("input", (e) => {
     audio.volume = e.target.value;
   });
 
+  // Volume: audio -> slider
   audio.addEventListener("volumechange", () => {
     if (volumeSlider) volumeSlider.value = audio.volume;
   });
 
+  // Responsive: show volume only on wide screens while playing
   function applySmallScreenRule() {
     const isNarrow = window.matchMedia("(max-width: 767px)").matches;
-
-    const volumeControl = document.getElementById("volumeControl");
-
     if (volumeControl) {
       volumeControl.style.display = !isNarrow && isPlaying ? "flex" : "none";
-    } else {
-      console.warn("volumeControl element not found");
     }
   }
+
   window.addEventListener("load", applySmallScreenRule);
   window.addEventListener("resize", applySmallScreenRule);
-
   /**
    * Activate/show sections on load with hash links
    */
@@ -363,7 +348,7 @@
         console.log("Back-to-top clicked");
         window.scrollTo({
           top: 0,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       });
     }
