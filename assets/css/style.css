@@ -18,14 +18,6 @@
   font-display: swap;
 }
 
-/* @font-face {
-  font-family: 'Lato Hairline';
-  src: url('../font/Lato/Lato-Hairline/Lato-Hairline.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-} */
-
 @font-face {
   font-family: 'Lato';
   src: url('../font/Lato/Lato-Light/Lato-Light.woff2') format('woff2');
@@ -43,40 +35,16 @@
 }
 
 @font-face {
-  font-family: 'Great Vibes';
-  src: url('../font/Great-Vibes/GreatVibes-Regular.woff2') format('woff2');
-  font-weight: 400;
+  font-family: 'Handjet';
+  src: url('../font/Handjet/Handjet-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Tilt Prism';
-  src: url('../font/Tilt_Prism/TiltPrism-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik Moonrocks';
-  src: url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Fredericka the Great';
-  src: url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Rubik Dirt';
-  src: url('../font/Rubik_Dirt/RubikDirt-Regular.woff2') format('woff2');
+  font-family: 'Handjet';
+  src: url('../font/Handjet/Handjet-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -86,14 +54,6 @@
   font-family: 'Handjet';
   src: url('../font/Handjet/Handjet-Thin.woff2') format('woff2');
   font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Handjet';
-  src: url('../font/Handjet/Handjet-Regular.woff2') format('woff2');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -886,10 +846,10 @@ section .container {
 
 .section-title p,
 .section-title span {
-  /* margin: 0; */
-  font-size: 36px;
   font-family: "Lato", sans-serif;
   font-weight: 100;
+  /* margin: 0; */
+  font-size: 36px;
   text-transform: uppercase;
   margin: 0 0 15px 0;
 }
@@ -912,7 +872,7 @@ section .container {
 }
 
 .about-me .content ul li {
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
   margin-bottom: 20px;
   display: flex;
   /* align-items: center; */
@@ -935,7 +895,7 @@ section .container {
 }
 
 .about-me .content p {
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1em;
   letter-spacing: 1.3px;
@@ -986,18 +946,17 @@ section .container {
 
 .counts .count-box span {
   font-family: 'Poiret One', sans-serif;
+  font-weight: 600;
   font-size: 36px;
   display: inline-block;
-  font-weight: 600;
   color: var(--white);
 }
 
 .counts .count-box p {
-  padding: 0;
-  margin: 0;
-  /* font-family: "Raleway", sans-serif; */
   font-family: 'Poiret One', sans-serif;
   font-size: 14px;
+  padding: 0;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1025,12 +984,12 @@ section .container {
 }
 
 .skills .progress .skill {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   padding: 0;
   margin: 0;
   /* text-transform: uppercase; */
   display: block;
-  font-family: 'Lato';
-  font-weight: 300;
   color: var(--white);
 }
 
@@ -1123,7 +1082,7 @@ section .container {
 }
 
 .interests .icon-box h3 {
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -1158,7 +1117,7 @@ section .container {
 }
 
 .awards .icon-box h3 {
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -1201,8 +1160,8 @@ section .container {
 
 .testimonials .testimonial-item h3 {
   font-family: 'Handjet', sans-serif;
+  font-weight: 700;
   font-size: 18px;
-  font-weight: bold;
   margin: 10px 0 5px 45px;
   color: var(--twilightBlue);
 }
@@ -1468,9 +1427,9 @@ section .container {
 }
 
 .services .icon-box h4 a {
-  font-family: 'Handjet';
+  font-family: 'Handjet', sans-serif;
+  font-weight: 100;
   font-size: 21px;
-  font-weight: 300;
   color: var(--white);
 }
 
@@ -1686,11 +1645,11 @@ section .container {
 }
 
 .portfolio-details .portfolio-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
   font-size: 26px;
   /* font-weight: 700; */
   margin-bottom: 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
   text-transform: uppercase;
 }
 
@@ -1781,16 +1740,16 @@ section .container {
 
 .contact .info-box h3 {
   font-family: 'handjet', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   color: var(--lightGrey);
-  font-weight: 700;
   margin: 10px 0 8px 15px;
   letter-spacing: 3px;
 }
 
 .contact .info-box p,
 .contact .info-box a {
-  font-family: 'Handjet';
+  font-family: 'Handjet', sans-serif;
   font-size: 17px;
   padding: 0;
   color: var(--white);
