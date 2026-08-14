@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2');
+  src: url('../font/Lato/Lato-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../font/Lato/Lato-Light/Lato-Light.woff2') format('woff2');
+  src: url('../font/Lato/Lato-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../font/Lato/Lato-Thin/Lato-Thin.woff2') format('woff2');
+  src: url('../font/Lato/Lato-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
