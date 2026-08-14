@@ -1342,8 +1342,8 @@ section .container {
 } */
 
 .resume .resume-title {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
   margin-top: 20px;
   margin-bottom: 20px;
   color: var(--white);
@@ -1357,11 +1357,10 @@ section .container {
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
+  line-height: 15px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   color: var(--roti);
   margin-bottom: 10px;
 }
