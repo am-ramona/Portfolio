@@ -4,35 +4,31 @@
 
 @font-face {
   font-family: "Zefani";
-  src: url("../font/Zefani/Zefani.eot");
-  src: url("../font/Zefani/Zefani.woff") format("woff"),
-    url("../font/Zefani/Zefani.otf") format("opentype"),
-    url("../font/Zefani/Zefani.svg#filename") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot');
-  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.woff') format('woff'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.ttf') format('truetype'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.svg#Lato-Regular') format('svg');
-  font-weight: normal;
+  src: url("../font/Zefani/Zefani.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
   font-family: 'Lato Hairline';
-  src: url('../font/Lato/Lato-Hairline/Lato-Hairline.eot');
-  src: url('../font/Lato/Lato-Hairline/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
-    url('../font/Lato/Lato-Hairline/Lato-Hairline.woff2') format('woff2'),
-    url('../font/Lato/Lato-Hairline/Lato-Hairline.woff') format('woff'),
-    url('../font/Lato/Lato-Hairline/Lato-Hairline.ttf') format('truetype'),
-    url('../font/Lato/Lato-Hairline/Lato-Hairline.svg#Lato-Hairline') format('svg');
+  src: url('../font/Lato/Lato-Hairline/Lato-Hairline.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato/Lato-Light/Lato-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -40,38 +36,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../font/Lato/Lato-Light/Lato-Light.eot');
-  src: url('../font/Lato/Lato-Light/Lato-Light.eot?#iefix') format('embedded-opentype'),
-    url('../font/Lato/Lato-Light/Lato-Light.woff2') format('woff2'),
-    url('../font/Lato/Lato-Light/Lato-Light.woff') format('woff'),
-    url('../font/Lato/Lato-Light/Lato-Light.ttf') format('truetype'),
-    url('../font/Lato/Lato-Light/Lato-Light.svg#Lato-Light') format('svg');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot');
-  src: url('../font/Lato/Lato-Regular/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.woff2') format('woff2'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.woff') format('woff'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.ttf') format('truetype'),
-    url('../font/Lato/Lato-Regular/Lato-Regular.svg#Lato-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('../font/Lato/Lato-Thin/Lato-Thin.eot');
-  src: url('../font/Lato/Lato-Thin/Lato-Thin.eot?#iefix') format('embedded-opentype'),
-    url('../font/Lato/Lato-Thin/Lato-Thin.woff2') format('woff2'),
-    url('../font/Lato/Lato-Thin/Lato-Thin.woff') format('woff'),
-    url('../font/Lato/Lato-Thin/Lato-Thin.ttf') format('truetype'),
-    url('../font/Lato/Lato-Thin/Lato-Thin.svg#Lato-Thin') format('svg');
+  src: url('../font/Lato/Lato-Thin/Lato-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -79,77 +44,47 @@
 
 @font-face {
   font-family: 'Great Vibes';
-  src: url('../font/Great-Vibes/GreatVibes-Regular.eot');
-  src: url('../font/Great-Vibes/GreatVibes-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Great-Vibes/GreatVibes-Regular.woff2') format('woff2'),
-    url('../font/Great-Vibes/GreatVibes-Regular.woff') format('woff'),
-    url('../font/Great-Vibes/GreatVibes-Regular.ttf') format('truetype'),
-    url('../font/Great-Vibes/GreatVibes-Regular.svg#GreatVibes-Regular') format('svg');
-  font-weight: normal;
+  src: url('../font/Great-Vibes/GreatVibes-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Tilt Prism';
-  src: url('../font/Tilt_Prism/TiltPrism-Regular.eot');
-  src: url('../font/Tilt_Prism/TiltPrism-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Tilt_Prism/TiltPrism-Regular.woff2') format('woff2'),
-    url('../font/Tilt_Prism/TiltPrism-Regular.woff') format('woff'),
-    url('../font/Tilt_Prism/TiltPrism-Regular.ttf') format('truetype'),
-    url('../font/Tilt_Prism/TiltPrism-Regular.svg#TiltPrism-Regular') format('svg');
-  font-weight: normal;
+  src: url('../font/Tilt_Prism/TiltPrism-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Rubik Moonrocks';
-  src: url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.eot');
-  src: url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff2') format('woff2'),
-    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff') format('woff'),
-    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.ttf') format('truetype'),
-    url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.svg#RubikMoonrocks-Regular') format('svg');
-  font-weight: normal;
+  src: url('../font/Rubik_Moonrocks/RubikMoonrocks-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Fredericka the Great';
-  src: url('../font/Frederica_The_Great/FrederickatheGreat-Regular.eot');
-  src: url('../font/Frederica_The_Great/FrederickatheGreat-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff2') format('woff2'),
-    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff') format('woff'),
-    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.ttf') format('truetype'),
-    url('../font/Frederica_The_Great/FrederickatheGreat-Regular.svg#FrederickatheGreat-Regular') format('svg');
-  font-weight: normal;
+  src: url('../font/Frederica_The_Great/FrederickatheGreat-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Rubik Dirt';
-  src: url('../font/Rubik_Dirt/RubikDirt-Regular.eot');
-  src: url('../font/Rubik_Dirt/RubikDirt-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Rubik_Dirt/RubikDirt-Regular.woff2') format('woff2'),
-    url('../font/Rubik_Dirt/RubikDirt-Regular.woff') format('woff'),
-    url('../font/Rubik_Dirt/RubikDirt-Regular.ttf') format('truetype'),
-    url('../font/Rubik_Dirt/RubikDirt-Regular.svg#RubikDirt-Regular') format('svg');
-  font-weight: normal;
+  src: url('../font/Rubik_Dirt/RubikDirt-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Handjet';
-  src: url('../font/Handjet/Handjet-Thin.eot');
-  src: url('../font/Handjet/Handjet-Thin.eot?#iefix') format('embedded-opentype'),
-    url('../font/Handjet/Handjet-Thin.woff2') format('woff2'),
-    url('../font/Handjet/Handjet-Thin.woff') format('woff'),
-    url('../font/Handjet/Handjet-Thin.ttf') format('truetype'),
-    url('../font/Handjet/Handjet-Thin.svg#Handjet-Thin') format('svg');
+  src: url('../font/Handjet/Handjet-Thin.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -157,26 +92,16 @@
 
 @font-face {
   font-family: 'Handjet';
-  src: url('../font/Handjet/Handjet-Regular.eot');
-  src: url('../font/Handjet/Handjet-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/Handjet/Handjet-Regular.woff2') format('woff2'),
-    url('../font/Handjet/Handjet-Regular.woff') format('woff'),
-    url('../font/Handjet/Handjet-Regular.ttf') format('truetype'),
-    url('../font/Handjet/Handjet-Regular.svg#Handjet-Regular') format('svg');
-  font-weight: normal;
+  src: url('../font/Handjet/Handjet-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Poiret One';
-  src: url('../font/PoiretOne/PoiretOne-Regular.eot');
-  src: url('../font/PoiretOne/PoiretOne-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../font/PoiretOne/PoiretOne-Regular.woff2') format('woff2'),
-    url('../font/PoiretOne/PoiretOne-Regular.woff') format('woff'),
-    url('../font/PoiretOne/PoiretOne-Regular.ttf') format('truetype'),
-    url('../font/PoiretOne/PoiretOne-Regular.svg#PoiretOne-Regular') format('svg');
-  font-weight: normal;
+  src: url('../font/PoiretOne/PoiretOne-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -288,7 +213,7 @@ html {
 }
 
 body {
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -963,9 +888,9 @@ section .container {
 .section-title span {
   /* margin: 0; */
   font-size: 36px;
+  font-family: "Lato", sans-serif;
   font-weight: 100;
   text-transform: uppercase;
-  font-family: "Lato", sans-serif;
   margin: 0 0 15px 0;
 }
 
@@ -1010,9 +935,9 @@ section .container {
 }
 
 .about-me .content p {
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 1em;
-  font-family: 'Lato';
   letter-spacing: 1.3px;
   line-height: 1.4;
   padding: 0 1.5rem;
@@ -1104,9 +1029,9 @@ section .container {
   margin: 0;
   /* text-transform: uppercase; */
   display: block;
+  font-family: 'Lato';
   font-weight: 300;
   color: var(--white);
-  font-family: 'Lato';
 }
 
 .skills .progress .skill .val {
@@ -1198,13 +1123,13 @@ section .container {
 }
 
 .interests .icon-box h3 {
+  font-family: 'Lato';
   font-weight: 300;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-size: 16px;
   color: var(--white);
-  font-family: 'Lato';
 }
 
 .interests .icon-box:hover {
@@ -1233,13 +1158,13 @@ section .container {
 }
 
 .awards .icon-box h3 {
+  font-family: 'Lato';
   font-weight: 300;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-size: 16px;
   color: var(--white);
-  font-family: 'Lato';
 }
 
 .awards .icon-box h3+span {
@@ -1764,9 +1689,9 @@ section .container {
   font-size: 26px;
   /* font-weight: 700; */
   margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
   font-weight: 100;
   text-transform: uppercase;
-  font-family: "Lato", sans-serif;
 }
 
 .portfolio-details .portfolio-info {
@@ -1831,7 +1756,7 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-/* .contact .info-box {
+.contact .info-box {
   display: grid;
   align-items: center;
   grid-template-areas:
@@ -1871,7 +1796,7 @@ section .container {
   color: var(--white);
   line-height: 24px;
   /* font-size: 14px; */
-/* margin: 0 0 0 15px;
+   margin: 0 0 0 15px;
 }
 
 .contact .info-box .social-links {
@@ -1994,7 +1919,7 @@ section .container {
   100% {
     transform: rotate(360deg);
   }
-} */
+}
 
 /*--------------------------------------------------------------
 # Credits
