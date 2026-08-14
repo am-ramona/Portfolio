@@ -891,7 +891,7 @@ section .container {
 }
 
 .about-me .content ul li {
-  font-family: "Lato", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   margin-bottom: 1.25rem;
   display: flex;
   /* align-items: center; */
@@ -916,7 +916,7 @@ section .container {
 .about-me .content p {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1rem;
   letter-spacing: 0.08125rem;
   line-height: 1.4;
   padding: 0 1.5rem;
@@ -967,7 +967,7 @@ section .container {
 .counts .count-box span {
   font-family: "Poiret One", sans-serif;
   font-weight: 600;
-  font-size: 2.25rem;
+  font-size: 2rem;
   display: inline-block;
   color: var(--white);
 }
@@ -984,7 +984,7 @@ section .container {
 --------------------------------------------------------------*/
 
 .skills .progress {
-  height: 6.875rem;
+  height: 8.5rem;
   /* 60px */
   display: block;
   background: none;
@@ -1005,8 +1005,9 @@ section .container {
 }
 
 .skills .progress .skill {
-  font-family: "Lato", sans-serif;
+  font-family: "JetBrains Mono", sans-serif;
   font-weight: 300;
+  font-size: 0.75rem;
   padding: 0;
   margin: 0;
   /* text-transform: uppercase; */
@@ -1126,6 +1127,7 @@ section .container {
   grid-template-columns: 2rem auto;
   grid-template-rows: minmax(2rem, auto) auto;
   grid-column-gap: 0.625rem;
+  grid-row-gap: 0.3125rem;
   align-items: center;
   padding: 1.25rem;
   background: var(--light-color);
@@ -1139,10 +1141,12 @@ section .container {
 .awards .icon-box h3 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.08125rem;
+  line-height: 1.5;
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-size: 1rem;
+  /* line-height: 1; */
   color: var(--white);
 }
 
@@ -1504,6 +1508,7 @@ section .container {
 }
 
 .portfolio #portfolio-flters li {
+  font-family: 'JetBrains Mono', monospace;
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem 0.625rem 1rem;
