@@ -98,16 +98,10 @@
   --pink: #e3a393;
   --bs-body-color: #f0ffff;
   --bs-link-color-rgb: #f0ffff;
-  /* --bs-link-hover-color-rgb: #BCFE49; */
-  /* --bs-link-hover-color-rgb: #B6B544; */
   --bs-link-hover-color-rgb: #09e85e;
   --bs-progress-bar-color: #b6b544;
   --bs-progress-bar-bg: #b6b544;
-  /* --roti: #B6B544; */
-  /* --roti: #09e85e; */
-
-  /* --roti: #98CE00; */
-  --roti: #00E676;
+  --accent: #00E676;
   --twilightBlue: #f0ffff;
   --grey: #797986;
   --lightGrey: #bbbcbe;
@@ -135,13 +129,10 @@
   --bs-body-color: #1e2019;
   --pink: #e3a393;
   --bs-link-color-rgb: #1e2019;
-  /* --bs-link-hover-color-rgb: #BCFE49; */
   --bs-link-hover-color-rgb: #6f73d2;
   --bs-progress-bar-color: #b6b544;
   --bs-progress-bar-bg: #b6b544;
-  /* --roti: #6f73d2; */
-  /* --roti:#623CEA; */
-  --roti: #7F00FF;
+  --accent: #7F00FF;
   --twilightBlue: #1e2019;
   --grey: #797986;
   --lightGrey: #7d7e75;
@@ -285,7 +276,7 @@ iframe {
 }
 
 .spin-on-load {
-  color: var(--roti);
+  color: var(--accent);
   display: inline-block;
   animation: spin 1s linear infinite;
 }
@@ -327,7 +318,7 @@ iframe {
 #header h2 {
   font-weight: 300;
   font-size: clamp(0.5em, 3vw, 1em);
-  color: var(--roti);
+  color: var(--accent);
   /* font-family: inherit; */
   letter-spacing: 0.08125rem;
   margin-top: 1.25rem;
@@ -368,8 +359,8 @@ iframe {
 
 #header h2 span {
   letter-spacing: 0.0625rem;
-  /* border-bottom: 2px solid var(--roti); */
-  color: var(--roti);
+  /* border-bottom: 2px solid var(--accent); */
+  color: var(--accent);
 }
 
 #header h2 span:hover {
@@ -404,11 +395,11 @@ iframe {
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem; */
-  color: var(--roti);
+  color: var(--accent);
 }
 
 #header .social-links a:hover {
-  /* background: var(--roti); */
+  /* background: var(--accent); */
   font-style: italic;
 }
 
@@ -525,11 +516,11 @@ iframe {
 
 button#bd-theme {
   background: transparent;
-  border-color: var(--roti);
+  border-color: var(--accent);
 }
 
 button#bd-theme::after {
-  color: var(--roti);
+  color: var(--accent);
 }
 
 #color-theme-dropdown,
@@ -553,13 +544,13 @@ button#bd-theme::after {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: var(--roti);
+  color: var(--accent);
   font-size: 1.4rem;
   outline: none;
 }
 
 .volume-icon {
-  color: var(--roti);
+  color: var(--accent);
 }
 
 #playPauseButton {
@@ -619,7 +610,7 @@ button#bd-theme::after {
   height: 1.25rem;
   width: 1.25rem;
   border-radius: 50%;
-  background: var(--roti);
+  background: var(--accent);
   cursor: pointer;
   margin-top: -0.375rem;
   box-shadow: 0.0625rem 0.0625rem 0.0625rem #000000,
@@ -631,7 +622,7 @@ button#bd-theme::after {
   height: 1.25rem;
   width: 1.25rem;
   border-radius: 50%;
-  background: var(--roti);
+  background: var(--accent);
   cursor: pointer;
 }
 
@@ -640,7 +631,7 @@ button#bd-theme::after {
   height: 1.25rem;
   width: 1.25rem;
   border-radius: 50%;
-  background: var(--roti);
+  background: var(--accent);
   cursor: pointer;
   margin-top: 0;
 }
@@ -710,7 +701,7 @@ button#bd-theme::after {
   height: 0.125rem;
   bottom: -0.9375rem;
   left: 0;
-  background-color: var(--roti);
+  background-color: var(--accent);
   visibility: hidden;
   width: 0;
   transition: all 0.3s ease-in-out 0s;
@@ -727,7 +718,7 @@ button#bd-theme::after {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: var(--roti);
+  color: var(--accent);
 }
 
 /* Mobile Navigation */
@@ -844,7 +835,7 @@ section .container {
   width: 7.5rem;
   height: 0.125rem;
   display: inline-block;
-  background: var(--roti);
+  background: var(--accent);
   margin: 0.25rem 0.625rem;
 }
 
@@ -888,7 +879,7 @@ section .container {
   font-weight: 500;
   font-size: 1.625rem;
   /* color: var(--bs-link-hover-color-rgb); */
-  color: var(--roti);
+  color: var(--accent);
   letter-spacing: 0.125rem;
 }
 
@@ -902,7 +893,7 @@ section .container {
   margin-bottom: 1.25rem;
   display: flex;
   /* align-items: center; */
-  color: var(--roti);
+  color: var(--accent);
 }
 
 .about-me .content ul strong {
@@ -966,7 +957,7 @@ section .container {
   font-size: 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   padding: 0.75rem;
-  color: var(--roti);
+  color: var(--accent);
   border-radius: 50px;
   line-height: 0;
 }
@@ -1037,7 +1028,7 @@ section .container {
   height: 0.1875rem;
   border-radius: 10px;
   transition: 0.9s;
-  background-color: var(--roti);
+  background-color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -1089,7 +1080,7 @@ section .container {
 .icon-box i {
   font-size: 2rem;
   line-height: 1;
-  color: var(--roti);
+  color: var(--accent);
 }
 
 /*--------------------------------------------------------------
@@ -1160,7 +1151,7 @@ section .container {
 .awards .icon-box h3+span {
   font-size: 0.8125rem;
   grid-area: d;
-  color: var(--roti);
+  color: var(--accent);
 }
 
 .awards .icon-box:hover {
@@ -1251,7 +1242,7 @@ section .container {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--roti);
+  background-color: var(--accent);
 }
 
 /*--- Back To Top ---*/
@@ -1288,7 +1279,7 @@ section .container {
   left: 0;
   width: 100%;
   height: 0.125rem;
-  background-color: var(--roti);
+  background-color: var(--accent);
   transform: scaleX(1);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -1324,7 +1315,7 @@ section .container {
 
 .resume .btn>span {
   font-family: "JetBrains Mono", monospace;
-  color: var(--roti);
+  color: var(--accent);
   font-size: 0.875rem;
   font-weight: normal;
 }
@@ -1372,7 +1363,7 @@ section .container {
   font-size: 0.9375rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--roti);
+  color: var(--accent);
   margin-bottom: 0.625rem;
 }
 
@@ -1405,8 +1396,8 @@ section .container {
   border-radius: 50px;
   left: -0.5625rem;
   top: 0;
-  background: var(--roti);
-  border: 2px solid var(--roti);
+  background: var(--accent);
+  border: 2px solid var(--accent);
 }
 
 /*--------------------------------------------------------------
@@ -1425,7 +1416,7 @@ section .container {
   margin: 0 auto;
   width: 4rem;
   height: 4rem;
-  background: var(--roti);
+  background: var(--accent);
   border-radius: 0.3125rem;
   transition: all 0.3s ease-out 0s;
   display: flex;
@@ -1474,8 +1465,8 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: var(--roti);
-  border-color: var(--roti);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .services .icon-box:hover .icon {
@@ -1483,11 +1474,11 @@ section .container {
 }
 
 .services .icon-box:hover .icon i {
-  color: var(--roti);
+  color: var(--accent);
 }
 
 .services .icon-box:hover .icon::before {
-  background: var(--roti);
+  background: var(--accent);
 }
 
 .services .icon-box:hover h4 a,
@@ -1532,7 +1523,7 @@ section .container {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  background: var(--roti);
+  background: var(--accent);
   color: var(--bs-white);
 }
 
@@ -1635,7 +1626,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: var(--roti);
+  color: var(--accent);
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1745,7 +1736,7 @@ section .container {
 }
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--roti);
+  background-color: var(--accent);
 }
 
 /*--------------------------------------------------------------
@@ -1767,7 +1758,7 @@ section .container {
 .contact .info-box i.bx {
   grid-area: a;
   font-size: 1.5rem;
-  color: var(--roti);
+  color: var(--accent);
   border-radius: 50%;
   padding: 0.875rem;
   float: left;
@@ -1933,7 +1924,7 @@ section .container {
 }
 
 .credits>span {
-  color: var(--roti);
+  color: var(--accent);
 }
 
 @media (max-width: 992px) {
@@ -1964,7 +1955,7 @@ section .container {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--roti);
+  background-color: var(--accent);
   border-radius: 10px;
 }
 
@@ -2020,13 +2011,13 @@ body {
 .cursor-dot {
   width: 0.5rem;
   height: 0.5rem;
-  background-color: var(--roti);
+  background-color: var(--accent);
   z-index: 9999;
 }
 
 .cursor-dot-outline {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: color-mix(in srgb, var(--roti) 50%, transparent);
+  background-color: color-mix(in srgb, var(--accent) 50%, transparent);
   z-index: 9998;
 }
