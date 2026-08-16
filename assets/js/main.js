@@ -230,15 +230,9 @@
     applySmallScreenRule();
 
     // First user interaction loads the audio
-    window.addEventListener("pointerdown", loadAudio, {
-      once: true,
-    });
-    window.addEventListener("keydown", loadAudio, {
-      once: true,
-    });
-    window.addEventListener("touchstart", loadAudio, {
-      once: true,
-    });
+    window.addEventListener("pointerdown", loadAudio, { once: true });
+    window.addEventListener("keydown", loadAudio, { once: true });
+    window.addEventListener("touchstart", loadAudio, { once: true });
   });
 
   // --------------------------------------------------
@@ -414,19 +408,17 @@
       });
     }
 
-    window.addEventListener("load", () => {
+    document.fonts.load('16px "bootstrap-icons"').then(() => {
       const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
+      spinnerWrapperEl.style.opacity = "0";
+      spinnerWrapperEl.style.display = "none";
 
-      if (spinnerWrapperEl) {
-        spinnerWrapperEl.style.opacity = "0";
-        spinnerWrapperEl.style.display = "none";
-      }
-
-      const icon = document.getElementById("loadingIcon");
-
-      if (icon) {
-        icon.classList.remove("spin-on-load");
-      }
+      window.addEventListener("load", () => {
+        const icon = document.getElementById("loadingIcon");
+        if (icon) {
+          icon.classList.remove("spin-on-load");
+        }
+      });
     });
 
     var i = 0;
