@@ -104,7 +104,10 @@
   --bs-progress-bar-color: #b6b544;
   --bs-progress-bar-bg: #b6b544;
   /* --roti: #B6B544; */
-  --roti: #09e85e;
+  /* --roti: #09e85e; */
+
+  /* --roti: #98CE00; */
+  --roti: #00E676;
   --twilightBlue: #f0ffff;
   --grey: #797986;
   --lightGrey: #bbbcbe;
@@ -122,7 +125,7 @@
 }
 
 [data-bs-theme="light"] {
-  --black: #ffffff;
+  --black: #FFFFFF;
   --green: blue;
   --lightGreen: orange;
   --aquamarine: #62fcaf;
@@ -136,11 +139,13 @@
   --bs-link-hover-color-rgb: #6f73d2;
   --bs-progress-bar-color: #b6b544;
   --bs-progress-bar-bg: #b6b544;
-  --roti: #6f73d2;
+  /* --roti: #6f73d2; */
+  /* --roti:#623CEA; */
+  --roti: #7F00FF;
   --twilightBlue: #1e2019;
   --grey: #797986;
   --lightGrey: #7d7e75;
-  --yellowish-color: #f2e9d0;
+  --yellowish-color: #CB9173;
   --dark-yellowish-color: #d4ccb6;
   --accent-color: #6f73d2;
   --typewriter-steps: 92;
@@ -149,7 +154,8 @@
 }
 
 :root {
-  --light-color: rgba(204, 204, 204, 0.1);
+  /* --light-color: rgba(204, 204, 204, 0.1); */
+  --light-color: rgb(204 204 204 / 12%);
   --yellow: #f7b32b;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -838,7 +844,7 @@ section .container {
   width: 7.5rem;
   height: 0.125rem;
   display: inline-block;
-  background: var(--bs-link-hover-color-rgb);
+  background: var(--roti);
   margin: 0.25rem 0.625rem;
 }
 
@@ -881,7 +887,8 @@ section .container {
   font-family: "Poiret One", sans-serif;
   font-weight: 500;
   font-size: 1.625rem;
-  color: var(--bs-link-hover-color-rgb);
+  /* color: var(--bs-link-hover-color-rgb); */
+  color: var(--roti);
   letter-spacing: 0.125rem;
 }
 
@@ -895,7 +902,7 @@ section .container {
   margin-bottom: 1.25rem;
   display: flex;
   /* align-items: center; */
-  color: var(--bs-link-hover-color-rgb);
+  color: var(--roti);
 }
 
 .about-me .content ul strong {
@@ -959,7 +966,7 @@ section .container {
   font-size: 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   padding: 0.75rem;
-  color: var(--bs-link-hover-color-rgb);
+  color: var(--roti);
   border-radius: 50px;
   line-height: 0;
 }
@@ -1782,7 +1789,7 @@ section .container {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.8125rem;
   padding: 0;
-  color: var(--yellowish-color);
+  color: var(--white);
   line-height: 1.5rem;
   /* font-size: 0.875rem; */
   margin: 0 0 0 0.9375rem;

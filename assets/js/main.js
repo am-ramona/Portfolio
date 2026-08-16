@@ -35,18 +35,18 @@
     const storedTheme = getStoredTheme();
     if (storedTheme) return storedTheme;
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ?
+      "dark" :
+      "light";
   };
 
   const setTheme = (theme) => {
     if (theme === "auto") {
       document.documentElement.setAttribute(
         "data-bs-theme",
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light"
+        window.matchMedia("(prefers-color-scheme: dark)").matches ?
+        "dark" :
+        "light"
       );
     } else {
       document.documentElement.setAttribute("data-bs-theme", theme);
@@ -230,9 +230,15 @@
     applySmallScreenRule();
 
     // First user interaction loads the audio
-    window.addEventListener("pointerdown", loadAudio, { once: true });
-    window.addEventListener("keydown", loadAudio, { once: true });
-    window.addEventListener("touchstart", loadAudio, { once: true });
+    window.addEventListener("pointerdown", loadAudio, {
+      once: true
+    });
+    window.addEventListener("keydown", loadAudio, {
+      once: true
+    });
+    window.addEventListener("touchstart", loadAudio, {
+      once: true
+    });
   });
 
   // --------------------------------------------------
