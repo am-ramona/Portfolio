@@ -1066,9 +1066,11 @@ section .container {
   .skills .skills-content .col-lg-6:nth-child(2) .progress:nth-last-child(2) {
     height: 7rem;
   }
+}
 
+@media (max-width: 470px) {
   .section-title h2::after {
-    width: 5.3125rem;
+    width: 2rem;
   }
 }
 
