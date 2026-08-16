@@ -35,18 +35,18 @@
     const storedTheme = getStoredTheme();
     if (storedTheme) return storedTheme;
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ?
-      "dark" :
-      "light";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   };
 
   const setTheme = (theme) => {
     if (theme === "auto") {
       document.documentElement.setAttribute(
         "data-bs-theme",
-        window.matchMedia("(prefers-color-scheme: dark)").matches ?
-        "dark" :
-        "light"
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
       );
     } else {
       document.documentElement.setAttribute("data-bs-theme", theme);
@@ -231,13 +231,13 @@
 
     // First user interaction loads the audio
     window.addEventListener("pointerdown", loadAudio, {
-      once: true
+      once: true,
     });
     window.addEventListener("keydown", loadAudio, {
-      once: true
+      once: true,
     });
     window.addEventListener("touchstart", loadAudio, {
-      once: true
+      once: true,
     });
   });
 
@@ -414,18 +414,19 @@
       });
     }
 
-    // document.fonts.ready.then(() => {
-    document.fonts.load('16px "bootstrap-icons"').then(() => {
+    window.addEventListener("load", () => {
       const spinnerWrapperEl = document.querySelector(".spinner-wrapper");
-      spinnerWrapperEl.style.opacity = "0";
-      spinnerWrapperEl.style.display = "none";
 
-      window.addEventListener("load", () => {
-        const icon = document.getElementById("loadingIcon");
-        if (icon) {
-          icon.classList.remove("spin-on-load");
-        }
-      });
+      if (spinnerWrapperEl) {
+        spinnerWrapperEl.style.opacity = "0";
+        spinnerWrapperEl.style.display = "none";
+      }
+
+      const icon = document.getElementById("loadingIcon");
+
+      if (icon) {
+        icon.classList.remove("spin-on-load");
+      }
     });
 
     var i = 0;
