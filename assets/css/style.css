@@ -1031,7 +1031,7 @@ section .container {
   background-color: var(--accent);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   section {
     top: 7.5rem;
   }
@@ -1050,22 +1050,21 @@ section .container {
     text-indent: 0.9375rem;
   }
 
-  /* 
-  .skills .progress {
-    height: 8.125rem;
-  } */
 
-  /* .skills .progress:nth-child(2) {
-    height: 10.3125rem;
-  } */
+  .skills .progress {
+    height: 11rem;
+  }
+
+  .skills .progress:nth-child(2) {
+    height: 15rem;
+  }
 
   .skills .skills-content .col-lg-6:nth-child(2) .progress:first-child {
-    /* height: 5.8125rem; */
     margin-top: 0.9375rem;
   }
 
   .skills .skills-content .col-lg-6:nth-child(2) .progress:nth-last-child(2) {
-    height: 4.875rem;
+    height: 7rem;
   }
 
   .section-title h2::after {
